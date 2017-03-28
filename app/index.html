@@ -183,13 +183,16 @@
         </div>
     </div>
 
-   <div class="container">
+    <div class="container">
        <div class="projects">
            <h2 class="block__title">Наши проекты</h2>
            <div class="projects__item">
-               <div class="projects__item-img">
-                   <img src='img/project.png'>
-               </div>
+               <figure class="projects__item-img">
+                   <picture>
+                       <source srcset="img/project_tab.png" media="(max-width: 992px)">
+                       <img src="img/project.png">
+                   </picture>
+               </figure>
                <div class="projects__item-desc">
                    <a class="projects__item-title">КП "Светлая Поляна"</a>
                    <p class="projects__desc-item">
@@ -216,21 +219,6 @@
            </div>
        </div>
    </div>
-
-        <div class="container">
-            <div class="call-back">
-                <p class="call-back__desc">Вам необходима консультация? <br>
-                Обращайтесь, и мы ответим на вопросы</p>
-                <button class="header__btn header__btn_call-back">Получить консультацию</button>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="call-back">
-                <p class="call-back__desc">Остались вопросы? Звоните нам</p>
-                <p class="call-back__phone">+7 (495) 797-09-08</p>
-            </div>
-        </div>
 
     <div class="container">
         <div class="experience">
@@ -271,34 +259,28 @@
 
     <div class="clients">
         <div class="container">
-            <h2 class="block-title">Наши клиенты</h2>
+            <h2 class="block__title block__title_white">Клиенты</h2>
             <div class="swiper-container">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide clients__item">
-                        <img src="#">
-                        test
+                        <img src="img/clients1.png">
                     </div>
                     <div class="swiper-slide clients__item">
-                        <img src="#">
-                        test
+                        <img src="img/clients2.png">
                     </div>
                     <div class="swiper-slide clients__item">
-                        <img src="#">
-                        test
+                        <img src="img/clients3.png">
                     </div>
                     <div class="swiper-slide clients__item">
-                        <img src="#">
-                        test
+                        <img src="img/clients4.png">
                     </div>
                     <div class="swiper-slide clients__item">
-                        <img src="#">
-                        test
+                        <img src="img/clients5.png">
                     </div>
                     <div class="swiper-slide clients__item">
-                        <img src="#">
-                        test
+                        <img src="img/clients6.png">
                     </div>
                 </div>
                 <!-- If we need pagination -->
@@ -311,6 +293,79 @@
                 <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
             </div>
+        </div>
+    </div>
+
+    <div class="container seo">
+        <div class="call-back">
+            <p class="call-back__desc">Вам необходима консультация? <br>
+                Обращайтесь, и мы ответим на вопросы</p>
+            <button class="header__btn header__btn_call-back">Получить консультацию</button>
+        </div>
+        <div class="articles">
+            <h2 class="block__title">Студия ландшафтного дизайна Дмитрия Бочкова в Москве</h2>
+            <blockquote class="articles__cite">Все от подготовки проекта до грамотного озеленения
+                и благоустройства участка</blockquote>
+            <p class="articles__text">
+                Поможем создать  комфортное и красивое место отдыха для вас и вашей семьи!
+
+                <span class="articles__list">Хотите облагородить свой участок? Мечтаете о прекрасном саде с цветущими клумбами и прудом?</span>
+
+                <span class="articles__list">Планируете дизайн рокарием, детской площадкой или иными элементами?</span>
+
+                <span class="articles__list">Нужна помощь профессионального садовника для ухода за растениями?</span>
+
+                Предлагаем полный комплекс услуг по ландшафтному проектированию, озеленению
+                и благоустройству садов, участков в Москве и области. Разработаем дизайн как
+                всего участка, так и малых архитектурных форм. Выполним посадку деревьев и
+                кустарников, разобьем газон и вымостим дорожки, создадим декоративный огород,
+                установим систему автополива и многое другое.
+
+                Также вы можете заказать у нас услуги по уходу за садом и огородом: от полива растений
+                до обрезки деревьев, вырубки пней и подготовки участка к зиме.
+            </p>
+            <div class="articles__img">
+                <img src="img/articles_img.png">
+            </div>
+            <span class="articless__text-title">И еще 3 причины заказать озеленение и благоустройство
+                в нашей студии:
+            </span>
+            <p class="articles__text">
+                <span class="articles__list">Знаем все тонкости своей работы и особенности высадки в
+                        Подмосковье. Подберем оптимальны варианты для вашего участка и
+                        климатических условий региона. При правильном уходе ваш сад останется
+                    зеленым и красивым не один десяток лет.</span>
+                <span class="articles__list">Всегда максимально подробно ответим на ваши вопросы. Расскажем,
+                        почему выбрано то или иное растение, как правильно подготовить почву
+                        для высадки, как ухаживать за территорией и сохранить ландшафтный
+                        дизайн в первозданном виде.</span>
+                <span class="articles__list">Не бросаем клиентов после выполнения проекта. С радостью помогаем
+                        ухаживать за растениями, вы можете вызывать специалистов как на разовые
+                            работы, так и заказать сезонное обслуживание.</span>
+            </p>
+        </div>
+        <div class="public">
+            <h4 class="public_title">Публикации в СМИ</h4>
+            <article class="public__article">
+                <div class="public__article-content">
+                    <a class="public__article-title" href="#">Трава для газона: готовим
+                        травосмесь сами</a>
+                    <p class="public__article-text">Мечтаете о цветущем зеленом саде?
+                        Хотите, чтобы вас радовали пушистые красавицы-ели или стройные
+                        белые березки? А по осени плодоносили яблони-вишни?
+                        Чтобы вырастить такие деревья, требуется как минимум 10 лет.
+                        Кроме того, молодые саженцы нуждаются в особом уходе. </p>
+                </div>
+                <p class="public__article-author">"Московский космомолец"</p>
+            </article>
+            <button class="public__next"></button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="call-back call-back_last">
+            <p class="call-back__desc">Остались вопросы? Звоните нам</p>
+            <p class="call-back__phone">+7 (495) 797-09-08</p>
         </div>
     </div>
 

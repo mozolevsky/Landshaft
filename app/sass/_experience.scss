@@ -1,0 +1,106 @@
+.experience > div > div {
+  padding: 5px;
+}
+
+.experience {
+  padding: 0 10px;
+  padding-bottom: 60px;
+}
+
+.experience__item {
+  padding: 20px 0;
+  background-color: #2b542c;
+  color: #fff;
+  position: relative;
+}
+
+.experience__item-title {
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.experience__content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.experience__text {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.experience__text-number {
+  display: block;
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 300;
+}
+
+.experience__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0%;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center 100%;
+}
+
+.experience__bg_1 {
+  background-image: url("../img/exp1.png");
+}
+
+.experience__bg_2 {
+  background-image: url("../img/exp2.png");
+}
+
+.experience__bg_3 {
+  background-image: url("../img/exp3.png");
+  background-position: -155px center;
+  background-size: 160%;
+}
+
+.experience__item_1 {
+  background: linear-gradient(to right, $grad_green_dark1, $grad_green_dark2);
+}
+
+.experience__item_2 {
+  background: linear-gradient(to right, $grad_grey1, $grad_grey2);
+}
+
+.experience__item_3 {
+  background: linear-gradient(to right, $grad_blue1, $grad_blue2);
+}
+
+@media (max-width: 1200px) {
+  .experience__bg_3 {
+    background-position: -127px center;
+  }
+}
+
+@media (max-width: 992px) {
+  .experience__item {
+    padding: 23px 0;
+  }
+
+  .experience__item-title {
+    font-size: 16px;
+  }
+
+  .experience__bg_3 {
+    background-position: -28px center;
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience__item {
+    padding: 20px 0;
+  }
+
+  .experience__item-title {
+    font-size: 15px;
+  }
+}

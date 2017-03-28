@@ -1,0 +1,225 @@
+.public {
+  position: relative;
+  color: $bg_dark;
+  float: right;
+  width: 295px;
+}
+.public_title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.public__article-title {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  color: $green_text-medium;
+  text-decoration: underline;
+  @include trans;
+}
+
+.public__article-title:hover {
+  color: $bg_dark;
+}
+
+.public__article-text {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-style: italic;
+}
+
+.public__article-author {
+  position: relative;
+  padding: 10px 55px;
+  font-size: 16px;
+  line-height: 22px;
+  background-image: url('../img/mk.png');
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: 0 center;
+}
+
+.public__article-author::before {
+  position: absolute;
+  top: -40px;
+  left: 35px;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 20px solid transparent;
+  border-right: 20px solid $grey;
+}
+
+.public__article-content {
+  position: relative;
+  padding: 25px;
+  margin-bottom: 20px;
+  background-color: $grey;
+  border-radius: 10px;
+}
+
+.public__article-content::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 33px;
+  left: 8px;
+  width: 13px;
+  height: 13px;
+  background-image: url("../img/quote-left.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.public__article-content::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 27px;
+  right: 12px;
+  width: 13px;
+  height: 13px;
+  background-image: url("../img/quote-right.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.public__next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 41px;
+  height: 41px;
+  border: 1px solid $green_text-dark;
+  border-radius: 5px;
+  background-color: transparent;
+  background-image: url("../img/arrow_prev.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  @include trans;
+}
+
+.public__next:hover {
+  background-image: url('../img/arrow_white.png');
+  background-color: $green_text-dark;
+}
+
+@media (max-width: 1200px) {
+  .public {
+    width: 270px;
+  }
+
+  .public_title {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 992px) {
+  .public {
+    order: -1;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .public_title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 34px;
+    text-transform: none;
+  }
+
+  .public__article-content {
+    padding: 25px 40px;
+  }
+
+  .public__article-content::before {
+    top: calc(100% - 41px);
+  }
+
+  .public__next {
+    width: 150px;
+    top: calc(100% - 53px);
+  }
+
+  .public__article-author {
+    padding-left: 120px;
+    background-position: 60px center;
+  }
+}
+
+@media (max-width: 768px) {
+  .public__article-content {
+    background-color: transparent;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .public__article-text {
+    display: none;
+  }
+
+  .public__article-author {
+    text-align: center;
+    background-image: none;
+  }
+
+  .public__article-author::before {
+    top: 0;
+    left: 25%;
+    background-image: url("../img/mk.png");
+    border-color: transparent;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .public_title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .public__article-title {
+    position: relative;
+  }
+
+  .public__article-title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: -20px;
+    width: 13px;
+    height: 13px;
+    background-image: url("../img/quote-left.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .public__article-title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    right: -20px;
+    width: 13px;
+    height: 13px;
+    background-image: url("../img/quote-right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .public__article-content::before,
+  .public__article-content::after {
+    display: none;
+  }
+
+  .public__next {
+    display: none;
+  }
+}

@@ -1,0 +1,102 @@
+.services {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.services__block {
+  padding: 10px;
+}
+
+.services__block > div {
+  padding: 5px;
+}
+
+.services__block div:nth-child(2n) .services__item {
+  background: linear-gradient(to right, $grad_green_light1, $grad_green_light2);
+}
+
+.services__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 120px;
+  padding: 20px;
+  padding-left: 130px;
+  background: linear-gradient(to right, $grad_green_dark1, $grad_green_dark2);
+  border-radius: 5px;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+  @include trans;
+}
+
+.services__item:hover,
+.services__item:active,
+.services__item:focus {
+  background: linear-gradient(to right, $grad_grey1, $grad_grey2) !important;
+  color: $green_text-dark;
+  text-decoration: none;
+}
+
+.services__item-img {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: 25px center;
+}
+
+.services__item-img_1 {
+  background-image: url("../img/Services1.png");
+}
+
+.services__item-img_2 {
+  background-image: url("../img/Services2.png");
+}
+
+.services__item-img_3 {
+  background-image: url("../img/Services3.png");
+}
+
+.services__item-img_4 {
+  background-image: url("../img/Services4.png");
+}
+
+.services__item-img_5 {
+  background-image: url("../img/Services5.png");
+}
+
+.services__item-img_6 {
+  background-image: url("../img/Services6.png");
+}
+
+@media (max-width: 992px) {
+  .services__item {
+    font-size: 20px;
+  }
+  .services__block div .services__item_3 {
+    background: linear-gradient(to right, $grad_green_light1, $grad_green_light2);
+  }
+
+  .services__block div .services__item.services__item_4 {
+    background: linear-gradient(to right, $grad_green_dark1, $grad_green_dark2);
+  }
+}
+
+@media (max-width: 768px) {
+  .services__item {
+    display: flex;
+    justify-content: center;
+  }
+
+  .services__block div .services__item_3 {
+    background: linear-gradient(to right, $grad_green_dark1, $grad_green_dark2);
+  }
+
+  .services__block div .services__item.services__item_4 {
+    background: linear-gradient(to right, $grad_green_light1, $grad_green_light2);
+  }
+}

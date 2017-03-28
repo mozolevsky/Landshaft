@@ -1,0 +1,19 @@
+.clients {
+  padding-bottom: 55px;
+  margin-bottom: 30px;
+  background-color: $bg_dark;
+}
+
+.clients .swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
