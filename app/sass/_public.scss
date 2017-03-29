@@ -92,6 +92,7 @@
 
 .public__next {
   position: absolute;
+  z-index: 10;
   top: 0;
   right: 0;
   width: 41px;
@@ -105,9 +106,22 @@
   @include trans;
 }
 
+.public__slider {
+  top: -53px;
+}
+
+.public__wrapper {
+  padding-top: 50px;
+}
+
 .public__next:hover {
   background-image: url('../img/arrow_white.png');
   background-color: $green_text-dark;
+  z-index: 10;
+}
+
+.public__pagination  {
+  display: none;
 }
 
 @media (max-width: 1200px) {
@@ -143,8 +157,23 @@
   }
 
   .public__next {
-    width: 150px;
-    top: calc(100% - 53px);
+     width: 150px;
+     top: calc(100% - 53px);
+    background-position: 105px center;
+    z-index: 10;
+   }
+
+  .public__next::before {
+    content: 'Cледующий';
+    position: absolute;
+    top: 5px;
+    left: 14px;
+    color: $green_text-dark;
+    @include trans;
+  }
+
+  .public__next:hover::before {
+    color: $white;
   }
 
   .public__article-author {
@@ -221,5 +250,26 @@
 
   .public__next {
     display: none;
+  }
+
+  .public__pagination {
+    display: block;
+    text-align: center;
+  }
+
+  .public__pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 100%;
+    background: $grad_grey1;
+    opacity: 1;
+  }
+
+  .public__pagination .swiper-pagination-bullet-active {
+    width: 12px;
+    height: 12px;
+    border: 2px solid $grad_grey1;
+    background: transparent;
   }
 }

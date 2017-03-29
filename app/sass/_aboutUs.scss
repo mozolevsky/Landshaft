@@ -156,10 +156,20 @@
     position: relative;
   }
 
+
   .about-us__nav {
     display: none;
     flex-direction: column;
     margin: 0 -15px;
+    position: absolute;
+    z-index: 10;
+    left: 15px;
+    right: 0;
+    margin-left: -15px;
+    margin-right: 0;
+    background-color: #242425;
+    @include trans(0.6s);
+
   }
 
   .about-us__nav-open {
@@ -196,7 +206,7 @@
     content: '';
     position: absolute;
     top: 8px;
-    left: 0px;
+    left: 0;
     display: block;
     width: 24px;
     height: 2px;
@@ -209,14 +219,8 @@
 
   /*mobile menu opened*/
   .about-us__nav_active {
-    position: absolute;
-    z-index: 1;
+    display: flex;
     top: 51px;
-    left: 15px;
-    right: 0;
-    margin-left: -15px;
-    margin-right: 0;
-    background-color: $bg_dark;
   }
 
   .about-us__nav-open_active .about-us__nav-open-icon{
@@ -233,10 +237,6 @@
 
   .about-us__nav-open_active span {
     color: $green_text-dark;
-  }
-
-  .about-us__nav_active {
-    display: flex;
   }
 
   .about-us__adv {

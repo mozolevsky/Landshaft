@@ -5,6 +5,7 @@
     <title>Index</title>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/swiper/dist/css/swiper.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
 </head>
@@ -44,7 +45,7 @@
         <button class="about-us__nav-open">
             <span><i class="about-us__nav-open-icon"></i>Меню</span>
         </button>
-        <ul class="about-us__nav about-us__nav_active">
+        <ul class="about-us__nav"> <!-- about-us__nav_active-->
             <li class="about-us__nav-item">
                 <div class="about-us__nav-link">Ландшафтное проектирование</div>
                 <ul class="about-us__inner-menu">
@@ -78,49 +79,54 @@
             </li>
         </ul>
     </div>
-    <div class="slider__wrap">
-        <!-- <div class="slider__item slider__item_1">
-            <div class="slider__text">
-                <p class="slider__title">
-                    <span class="slider__title-1">Честный подход</span><br>
-                    <span class="slider__title-2">к ценам, нет скрытых</span><br>
-                    <span class="slider__title-3">условий и ограничений</span>
-                </p>
-                <p class="slider__desc">Мы против сложностей и путаницы. Поэтому в наших договорах
-                всегда указан перечень работ и сроки выполнения</p>
+    <div class="swiper-container slider">
+        <div class="swiper-wrapper slider__wrap">
+            <div class="slider__item slider__item_1 swiper-slide">
+                <div class="slider__text">
+                    <p class="slider__title">
+                        <span class="slider__title-1">Честный подход</span><br>
+                        <span class="slider__title-2">к ценам, нет скрытых</span><br>
+                        <span class="slider__title-3">условий и ограничений</span>
+                    </p>
+                    <p class="slider__desc">Мы против сложностей и путаницы. Поэтому в наших договорах
+                        всегда указан перечень работ и сроки выполнения</p>
+                </div>
+            </div>
+            <div class="slider__item slider__item_2 swiper-slide">
+                <div class="slider__text">
+                    <p class="slider__title">
+                        <span class="slider__title-1">Заработать тоже хотим.</span><br>
+                        <span class="slider__title-2">Но нам нужно меньше,</span><br>
+                        <span class="slider__title-3">чем многим другим</span>
+                    </p>
+                    <p class="slider__desc">Мы работаем на имя и репутацю, поэтому объем заказов для нас важнее</p>
+                </div>
+            </div>
+            <div class="slider__item slider__item_3 swiper-slide">
+                <div class="slider__text">
+                    <p class="slider__title">
+                        <span class="slider__title-1">Платите меньше,</span><br>
+                        <span class="slider__title-2">позволяя себе больше</span>
+                    </p>
+                    <p class="slider__desc">Наши услуги, как конструктор. Заказали нужные услуги
+                        и выбрали удобный для вас порядок оплаты</p>
+                </div>
+            </div>
+            <div class="slider__item slider__item_4 swiper-slide">
+                <div class="slider__text">
+                    <p class="slider__title">
+                        <span class="slider__title-1">Низкая цена</span><br>
+                        <span class="slider__title-2">на расения и материал.</span><br>
+                        <span class="slider__title-3">Клиенту - всегда оптовая цена</span>
+                    </p>
+                    <p class="slider__desc">Мы не накидываем % на материалы - это наш подход.
+                        Поэтому наши услуги будут выгоднее, чем у конкурентов</p>
+                </div>
             </div>
         </div>
-        <div class="slider__item slider__item_2">
-            <div class="slider__text">
-                <p class="slider__title">
-                    <span class="slider__title-1">Заработать тоже хотим.</span><br>
-                    <span class="slider__title-2">Но нам нужно меньше,</span><br>
-                    <span class="slider__title-3">чем многим другим</span>
-                </p>
-                <p class="slider__desc">Мы работаем на имя и репутацю, поэтому объем заказов для нас важнее</p>
-            </div>
-        </div>
-        <div class="slider__item slider__item_3">
-            <div class="slider__text">
-                <p class="slider__title">
-                    <span class="slider__title-1">Платите меньше,</span><br>
-                    <span class="slider__title-2">позволяя себе больше</span>
-                </p>
-                <p class="slider__desc">Наши услуги, как конструктор. Заказали нужные услуги
-                и выбрали удобный для вас порядок оплаты</p>
-            </div>
-        </div>-->
-        <div class="slider__item slider__item_4">
-            <div class="slider__text">
-                <p class="slider__title">
-                    <span class="slider__title-1">Низкая цена</span><br>
-                    <span class="slider__title-2">на расения и материал.</span><br>
-                    <span class="slider__title-3">Клиенту - всегда оптовая цена</span>
-                </p>
-                <p class="slider__desc">Мы не накидываем % на материалы - это наш подход.
-                Поэтому наши услуги будут выгоднее, чем у конкурентов</p>
-            </div>
-        </div>
+        <div class="slider__control-prev"></div>
+        <div class="slider__control-next"></div>
+        <div class="pagination-white"></div>
     </div>
     <div class="container">
         <ul class="about-us__adv">
@@ -186,36 +192,66 @@
     <div class="container">
        <div class="projects">
            <h2 class="block__title">Наши проекты</h2>
-           <div class="projects__item">
-               <figure class="projects__item-img">
-                   <picture>
-                       <source srcset="img/project_tab.png" media="(max-width: 992px)">
-                       <img src="img/project.png">
-                   </picture>
-               </figure>
-               <div class="projects__item-desc">
-                   <a class="projects__item-title">КП "Светлая Поляна"</a>
-                   <p class="projects__desc-item">
-                       <span>Общая площадь участка</span>
-                       <span class="projects__number">3.9 Га</span>
-                   </p>
-                   <p class="projects__desc-item">
-                       <span>Работы выполнены</span>
-                       <span class="projects__number">21 день</span>
-                   </p>
-                   <p class="projects__desc-item">
-                       <span>Общая стоимость материалов</span>
-                       <span class="projects__number">1 945 000 р</span>
-                   </p>
-                   <p class="projects__desc-item">
-                       <span>Общая стоимость работ</span>
-                       <span class="projects__number">510 000 р</span>
-                   </p>
+           <div class="swiper-container projectsSlider">
+               <div class="swiper-wrapper">
+                   <div class="projects__item swiper-slide">
+                       <figure class="projects__item-img">
+                           <picture>
+                               <source srcset="img/project_tab.png" media="(max-width: 992px)">
+                               <img src="img/project.png">
+                           </picture>
+                       </figure>
+                       <div class="projects__item-desc">
+                           <a class="projects__item-title">КП "Светлая Поляна"</a>
+                           <p class="projects__desc-item">
+                               <span>Общая площадь участка</span>
+                               <span class="projects__number">3.9 Га</span>
+                           </p>
+                           <p class="projects__desc-item">
+                               <span>Работы выполнены</span>
+                               <span class="projects__number">21 день</span>
+                           </p>
+                           <p class="projects__desc-item">
+                               <span>Общая стоимость материалов</span>
+                               <span class="projects__number">1 945 000 р</span>
+                           </p>
+                           <p class="projects__desc-item">
+                               <span>Общая стоимость работ</span>
+                               <span class="projects__number">510 000 р</span>
+                           </p>
+                       </div>
+                   </div>
+                   <div class="projects__item swiper-slide">
+                       <figure class="projects__item-img">
+                           <picture>
+                               <source srcset="img/project_tab.png" media="(max-width: 992px)">
+                               <img src="img/project.png">
+                           </picture>
+                       </figure>
+                       <div class="projects__item-desc">
+                           <a class="projects__item-title">КП "Светлая Поляна"</a>
+                           <p class="projects__desc-item">
+                               <span>Общая площадь участка</span>
+                               <span class="projects__number">3.9 Га</span>
+                           </p>
+                           <p class="projects__desc-item">
+                               <span>Работы выполнены</span>
+                               <span class="projects__number">21 день</span>
+                           </p>
+                           <p class="projects__desc-item">
+                               <span>Общая стоимость материалов</span>
+                               <span class="projects__number">1 945 000 р</span>
+                           </p>
+                           <p class="projects__desc-item">
+                               <span>Общая стоимость работ</span>
+                               <span class="projects__number">510 000 р</span>
+                           </p>
+                       </div>
+                   </div>
                </div>
-               <div class="projects__pagination">
-                   <button class="projects__pagination-item projects__pagination-prev">Предыдущий</button>
-                   <button class="projects__pagination-item projects__pagination-next">Следующий</button>
-               </div>
+
+               <button class="projects__pagination-item projects__pagination-prev">Предыдущий</button>
+               <button class="projects__pagination-item projects__pagination-next">Следующий</button>
            </div>
        </div>
    </div>
@@ -260,10 +296,8 @@
     <div class="clients">
         <div class="container">
             <h2 class="block__title block__title_white">Клиенты</h2>
-            <div class="swiper-container">
-                <!-- Additional required wrapper -->
+            <div class="swiper-container clients-slider">
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
                     <div class="swiper-slide clients__item">
                         <img src="img/clients1.png">
                     </div>
@@ -283,15 +317,7 @@
                         <img src="img/clients6.png">
                     </div>
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
+                <div class="clients__pagination"></div>
             </div>
         </div>
     </div>
@@ -346,19 +372,36 @@
         </div>
         <div class="public">
             <h4 class="public_title">Публикации в СМИ</h4>
-            <article class="public__article">
-                <div class="public__article-content">
-                    <a class="public__article-title" href="#">Трава для газона: готовим
-                        травосмесь сами</a>
-                    <p class="public__article-text">Мечтаете о цветущем зеленом саде?
-                        Хотите, чтобы вас радовали пушистые красавицы-ели или стройные
-                        белые березки? А по осени плодоносили яблони-вишни?
-                        Чтобы вырастить такие деревья, требуется как минимум 10 лет.
-                        Кроме того, молодые саженцы нуждаются в особом уходе. </p>
+            <div class="swiper-container public__slider">
+                <div class="swiper-wrapper public__wrapper">
+                    <article class="public__article swiper-slide">
+                        <div class="public__article-content">
+                            <a class="public__article-title" href="#">Трава для газона: готовим
+                                травосмесь сами</a>
+                            <p class="public__article-text">Мечтаете о цветущем зеленом саде?
+                                Хотите, чтобы вас радовали пушистые красавицы-ели или стройные
+                                белые березки? А по осени плодоносили яблони-вишни?
+                                Чтобы вырастить такие деревья, требуется как минимум 10 лет.
+                                Кроме того, молодые саженцы нуждаются в особом уходе. </p>
+                        </div>
+                        <p class="public__article-author">"Московский космомолец"</p>
+                    </article>
+                    <article class="public__article swiper-slide">
+                        <div class="public__article-content">
+                            <a class="public__article-title" href="#">Трава для газона: готовим
+                                травосмесь сами</a>
+                            <p class="public__article-text">Мечтаете о цветущем зеленом саде?
+                                Хотите, чтобы вас радовали пушистые красавицы-ели или стройные
+                                белые березки? А по осени плодоносили яблони-вишни?
+                                Чтобы вырастить такие деревья, требуется как минимум 10 лет.
+                                Кроме того, молодые саженцы нуждаются в особом уходе. </p>
+                        </div>
+                        <p class="public__article-author">"Московский космомолец"</p>
+                    </article>
                 </div>
-                <p class="public__article-author">"Московский космомолец"</p>
-            </article>
-            <button class="public__next"></button>
+                <button class="public__next"></button>
+                <div class="public__pagination"></div>
+            </div>
         </div>
     </div>
 
@@ -448,13 +491,7 @@
         </div>
     </footer>
 
-    <script src="../dist/js/swiper.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            paginationClickable: true
-        });
-    </script>
+    <script src="libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="js/scripts.min.js"></script>
 </body>
 </html>
