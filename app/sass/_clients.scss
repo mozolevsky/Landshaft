@@ -1,13 +1,48 @@
 .clients {
-  padding-bottom: 55px;
   margin-bottom: 30px;
   background-color: $bg_dark;
+}
+
+.clients-slider {
+  padding-bottom: 55px;
 }
 
 .clients .swiper-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.clients__item {
+  text-align: center;
+}
+
+.clients__pagination {
+  position: absolute;
+  text-align: center;
+  transition: .3s;
+  transform: translate3d(0,0,0);
+  z-index: 10;
+}
+
+.clients__pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #fff;
+  opacity: .75;
+}
+
+.clients__pagination .swiper-pagination-bullet-active {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+@media (min-width: 1200px) {
+  .clients__pagination {
+    display: none;
+  }
 }
 
 @media (max-width: 992px) {

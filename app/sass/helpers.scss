@@ -35,6 +35,6 @@ $slider_grey2: #4a4b4c;
   line-height: $lHeight;
 }
 
-@mixin trans {
-  transition: all 0.3s ease-in-out;
+@mixin trans($duration: 0.3s) {
+  transition: all $duration ease-in-out;
 }
