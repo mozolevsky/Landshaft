@@ -87,9 +87,14 @@
 }
 
 @media (max-width: 768px) {
+  .services {
+    padding-top: 0;
+  }
+
   .services__item {
     display: flex;
     justify-content: center;
+    text-align: center;
   }
 
   .services__block div .services__item_3 {

@@ -218,3 +218,18 @@
     height: auto;
   }
 }
+
+@media (max-width: 400px) {
+  .projects {
+    padding-bottom: 30px;
+  }
+
+  .projects__desc-item {
+    font-size: 12px;
+  }
+
+  .projects__pagination-item {
+    width: 48%;
+    font-size: 12px;
+  }
+}

@@ -72,6 +72,7 @@ var popupsClose = document.querySelectorAll('.popup__close');
 var fadeBlock = document.querySelector('.fade-block');
 var thankYouPopup = document.querySelector('.popup__thank-you');
 var callMePopup = document.querySelector('.popup__call-me');
+var callMeInput = document.querySelector('#popup__input');
 var notWorkPopup = document.querySelector('.popup__not-work');
 var sendTel = document.querySelector('.popup__send-tel');
 
@@ -110,9 +111,19 @@ var popupsHander = function () {
             hideElement(this.parentElement);
             showElement(fadeBlock);
             showElement(callMePopup);
+
             sendTel.addEventListener('click', function () {
-                hideElement(callMePopup);
-                showElement(thankYouPopup);
+                callMeInput.onfocus = function () {
+                    callMeInput.classList.remove('popup__input-not-filled');
+                };
+
+                if (callMeInput.value) {
+                    hideElement(callMePopup);
+                    showElement(thankYouPopup);
+                };
+                if (!callMeInput.value){
+                    callMeInput.classList.add('popup__input-not-filled');
+                };
             })
         });
     };
@@ -140,9 +151,7 @@ for (var i = 0; i <  menu.length; i++) {
 /*inputmask*/
 
 $(document).ready(function(){
-    $("#popup__input").inputmask({"mask": "+7 (777) 999-77-77"});  //static mask
-    /*$(selector).inputmask({"mask": "+7 (777) 999-77-77"}); //specifying options
-    $(selector).inputmask("9-a{1,3}9{1,3}"); //mask with dynamic syntax*/
+    $("#popup__input").inputmask("+7 (999) 999-99-99");  //static mask
 });
 
 

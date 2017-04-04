@@ -112,6 +112,15 @@
   text-align: center;
 }
 
+.popup__input-not-filled {
+  border-color: red;
+}
+
+.popup__input::-webkit-input-placeholder {color: white;}
+.popup__input::-moz-placeholder          {color: white;}
+.popup__input:-moz-placeholder           {color: white;}
+.popup__input:-ms-input-placeholder      {color: white;}
+
 
 @media (max-width: 768px) {
   .popup {

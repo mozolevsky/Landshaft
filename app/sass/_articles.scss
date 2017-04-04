@@ -40,7 +40,7 @@
 .articles__list::before {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 25px;
   left: 0;
   display: block;
   width: 13px;
@@ -85,12 +85,17 @@
 }
 
 @media (max-width: 768px) {
+  .articles {
+    padding-top: 20px;
+  }
+
   .articles .block__title {
     font-size: 26px;
     line-height: 35px;
   }
 
   .articles__cite {
+    padding: 25px;
     font-size: 18px;
   }
 
