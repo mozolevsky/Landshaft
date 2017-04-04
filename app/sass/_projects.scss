@@ -122,6 +122,10 @@
   background-image: url("../img/arrow_white.png");
 }
 
+.projects .swiper-wrapper {
+  height: 280px;
+}
+
 @media (max-width: 1200px) {
   .projects__item-desc {
     padding-top: 10px;
@@ -130,10 +134,11 @@
 
   .projects__item-img {
     width: 64%;
+    overflow: hidden;
   }
 
   .projects__item-img img {
-    width: 100%;
+    height: 100%;
   }
 
   .projects__desc-item {
@@ -147,13 +152,17 @@
 }
 
 @media (max-width: 992px) {
+  .projects__item-img img {
+    width: 100%;
+  }
+
   .projects__pagination-prev {
-    right: 20%;
+    right: 21%;
   }
 
   .projects__pagination-item {
-    width: 19%;
-    bottom: 93px;
+    width: 20%;
+    bottom: 0;
   }
 
   .projects__pagination-prev::before {
@@ -203,5 +212,9 @@
 
   .projects__pagination-prev {
     margin-left: 5px;
+  }
+
+  .projects .swiper-wrapper {
+    height: auto;
   }
 }

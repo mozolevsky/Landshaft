@@ -1,18 +1,13 @@
 .footer {
-  background-color: #5e5e5e;
-}
-
-/*FOOTER-TOP*/
-.footer__top {
-  padding: 40px 0;
-  color: #fff;
+  background-color: #1c1c1d;
 }
 
 /*FOOTER-BOTTOM*/
 .footer__bottom {
   padding: 40px 0;
-  background-color: #000;
+  background-color: #1c1c1d;
   color: #fff;
+  border-top: 1px solid $grad_grey1;
 }
 
 .footer__bottom-wrap {
@@ -34,7 +29,7 @@
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 25px;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .footer__text {
@@ -69,6 +64,58 @@
 .footer__mail:hover {
   color: $green_text-dark;
 }
+.footer__copyright {
+  font-weight: 400;
+}
+/*FOOTER-TOP*/
+
+.footer__top .container::before,
+.footer__top .container::after {
+  display: none;
+}
+
+.footer__block {
+  margin-bottom: 10px;
+}
+
+.footer__block-title {
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 35px;
+  font-weight: 400;
+  color: $green_text-dark;
+}
+
+.footer__block-title:hover {
+  text-decoration: underline;
+}
+
+.footer__top {
+  background-color: $bg_dark;
+}
+
+.footer__top .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 40px 15px 20px 15px;
+  color: #fff;
+}
+
+.footer__link {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.footer__link:hover,
+.footer__link:active,
+.footer__link:focus {
+  color: $green_text-dark;
+}
 
 @media (max-width: 992px) {
   .footer__name {
@@ -86,6 +133,24 @@
   .footer__phones-block {
     margin-bottom: 20px;
   }
+
+  .footer__phones span {
+    opacity: 1;
+  }
+
+  .footer__mail {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  /*FOOTER-TOP*/
+  .footer__block-wrap {
+    width: 49%;
+  }
+
+  /*FOOTER-BOTTOM*/
+  .footer__bottom {
+    border-top: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -101,5 +166,23 @@
   .footer__mail-block {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .footer__phones-block {
+    margin-bottom: 0;
+  }
+
+  .footer__work-hours {
+    margin-top: 10px;
+    opacity: 1;
+  }
+
+  .footer__copyright {
+    opacity: 0.7;
+  }
+
+  /*FOOTER-TOP*/
+  .footer__top {
+    display: none;
   }
 }

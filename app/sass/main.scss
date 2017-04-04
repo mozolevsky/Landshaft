@@ -11,6 +11,8 @@
 @import 'public';
 @import 'footer';
 @import 'seo';
+@import 'fade';
+@import 'popup';
 
 @font-face {
   font-family: Neris;
@@ -18,7 +20,15 @@
 }
 
 body {
+  position: relative;
   @include roboto;
+  background-color: $bg_dark;
+}
+
+.body-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: $white;
 }
 
 .block__title {
@@ -31,6 +41,14 @@ body {
 
 .block__title_white {
   color: rgba(255, 255, 255, 0.75);
+}
+
+.visible {
+  display: block;
+}
+
+button {
+  outline: none;
 }
 
 @media (max-width: 768px) {

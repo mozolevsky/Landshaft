@@ -58,7 +58,7 @@ gulp.task('rigger', function () {
         .pipe(gulp.dest('app/'))
 });
 
-gulp.task('watch', ['browser-sync', 'sass', 'scripts'], function () {
+gulp.task('watch', ['sass', 'scripts', 'browser-sync'], function () {
     gulp.watch('app/sass/**/*.scss', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);

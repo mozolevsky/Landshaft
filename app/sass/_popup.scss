@@ -1,0 +1,146 @@
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+  padding: 40px 50px;
+  width: 370px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, $grad_green_dark1, $grad_green_dark2);
+}
+
+.popup__title {
+  margin-bottom: 35px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.popup__input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.popup__input:focus,
+.popup__input:active {
+  background-color: $green_medium;
+  border-color: $green_medium;
+}
+
+.popup__order-tel {
+  width: 100%;
+  color: $bg_dark;
+  border: 1px solid $yellow;
+  font-size: 20px;
+}
+
+.popup__order-tel:hover,
+.popup__order-tel:active,
+.popup__order-tel:focus {
+  background-color: transparent;
+  border-color: $yellow;
+  color: $yellow;
+}
+
+.popup__send-tel {
+  width: 100%;
+  color: $bg_dark;
+  border: 1px solid $yellow;
+  font-size: 20px;
+}
+
+.popup__send-tel:hover,
+.popup__send-tel:active,
+.popup__send-tel:focus {
+  background-color: transparent;
+  border-color: $yellow;
+  color: $yellow;
+}
+
+.popup__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: block;
+  width: 23px;
+  height: 23px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.popup__close::before,
+.popup__close::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: 9px;
+  width: 1px;
+  height: 25px;
+  background-color: $white;
+  transform: rotate(45deg);
+  @include trans;
+}
+
+.popup__close:hover::before,
+.popup__close:hover::after,
+.popup__close:active::before,
+.popup__close:active::after,
+.popup__close:focus::before,
+.popup__close:focus::after {
+  background-color: $bg_dark;
+}
+
+.popup__close::after {
+  transform: rotate(-45deg);
+}
+
+.popup__text {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .popup {
+    position: absolute;
+    top: 108px;
+    width: 100%;
+    padding: 8px 40px 40px 40px;
+    border-radius: 0;
+    transform: none;
+    left: 0;
+  }
+
+  .popup__close {
+    top: 13px;
+    right: 13px;
+  }
+
+  .popup__close::before,
+  .popup__close::after {
+    top: 3px;
+    right: 14px;
+
+  }
+
+  .popup__title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 45px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}

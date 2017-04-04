@@ -30,12 +30,32 @@
   padding: 0;
 }
 
+.header__nav-item {
+  position: relative;
+}
+
 .header__nav-item a{
   color: $green_medium;
   font-size: 16px;
   font-weight: 700;
   text-decoration: underline;
   @include trans;
+}
+
+.header__nav-item::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: -18px;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: $grey;
+}
+
+.header__nav-item:first-of-type::before {
+  display: none;
 }
 
 .header__nav-item a:hover,
@@ -61,6 +81,7 @@
 }
 
 .header__btn {
+  width: auto;
   font-size: 16px;
   font-weight: 500;
   padding: 10px 20px;
@@ -70,17 +91,33 @@
   @include trans;
 }
 
-.header__btn:hover,
-.header__btn:active,
-.header__btn:focus {
+.popup__order-tel.header__btn_call {
+  width: auto;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  background-color: $yellow;
+  border: none;
+  border-radius: 5px;
+  @include trans;
+}
+
+.header__btn.popup__order-tel:hover,
+.header__btn.popup__order-tel:active,
+.header__btn.popup__order-tel:focus {
   background-color: $yellow-hover;
+  color: $bg_dark;
 }
 
 .header__phones-icon {
   display: none;
 }
 
-.header__phones-title {
+.header__popup-title {
+  display: none;
+}
+
+.popup__close.header__phones-close {
   display: none;
 }
 
@@ -115,6 +152,11 @@
 
   .header__nav-item {
     margin-right: 30px;
+  }
+
+  .header__nav-item::before {
+    background-color: $slider_grey2;
+    opacity: 0.5;
   }
 
   .header__nav-item a {
@@ -156,9 +198,13 @@
 
   .header__contacts-main-block {
     width: 100%;
-    padding: 20px 30px 40px;
+    padding: 8px 40px 40px 40px;
     text-align: center;
     display: none;
+  }
+
+  .header__popup-title {
+    display: block;
   }
 
   .header__phones {
@@ -167,10 +213,15 @@
     margin-bottom: 20px;
   }
 
-  .header__btn_call {
-    background-color: transparent;
+  .header__phones-item {
+    font-size: 26px;
+  }
+
+  .popup__order-tel.header__btn_call {
+    width: 100%;
+    background-color: $yellow;
     border: 1px solid $yellow;
-    color: $yellow;
+    color: $bg_dark;
     padding: 5px 20px;
   }
 
@@ -195,29 +246,9 @@
     background-position: center;
   }
 
-  .header__phones-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
+  .popup__close.header__phones-close {
     display: block;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-  }
-
-  .header__phones-close::before,
-  .header__phones-close::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 10px;
-    width: 1px;
-    height: 25px;
-    background-color: $white;
-    transform: rotate(45deg);
-  }
-
-  .header__phones-close::after {
-    transform: rotate(-45deg);
+    top: 122px;
+    right: 17px;
   }
 }
