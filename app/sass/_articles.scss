@@ -4,8 +4,12 @@
   padding-bottom: 40px;
 }
 
+.articles .block__title {
+  margin-top: 0;
+}
+
 .articles__cite {
-  padding: 25px;
+  padding: 25px 120px;
   font-size: 22px;
   line-height: 35px;
   font-style: italic;
@@ -21,8 +25,8 @@
   color: $bg_dark;
 }
 
-.articless__text-title {
-  font-size: 30px;
+.articles__text-title {
+  font-size: 29px;
   line-height: 40px;
   color: $green_text-medium;
 }
@@ -75,7 +79,7 @@
     font-size: 16px;
   }
 
-  .articless__text-title {
+  .articles__text-title {
     font-size: 26px;
   }
 }
@@ -90,7 +94,7 @@
     font-size: 18px;
   }
 
-  .articless__text-title {
+  .articles__text-title {
     font-size: 20px;
   }
 }

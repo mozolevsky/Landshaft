@@ -32,6 +32,7 @@
 .about-us__inner-menu {
   display: none;
   position: absolute;
+  z-index: 3;
   left: 0;
   right: 0;
   list-style: none;
@@ -82,13 +83,15 @@
   justify-content: space-between;
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .about-us__adv-item {
   position: relative;
   flex-grow: 1;
-  padding: 5px 0;
+  padding: 10px 0;
   padding-left: 70px;
+  flex-basis: 33%;
 }
 
 .about-us__adv-item::before {
@@ -268,6 +271,11 @@
   }
 
   .about-us__nav-item:hover .about-us__inner-menu {
-    opacity: 0;
+    display: none;
   }
+
+  .about-us__inner-menu {
+    position: relative;
+  }
+
 }

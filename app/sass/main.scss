@@ -13,6 +13,9 @@
 @import 'seo';
 @import 'breadcrumbs';
 @import 'servicePage';
+@import 'fade';
+@import 'popup';
+
 
 @font-face {
   font-family: Neris;
@@ -20,7 +23,15 @@
 }
 
 body {
+  position: relative;
   @include roboto;
+  background-color: $bg_dark;
+}
+
+.body-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: $white;
 }
 
 .block__title {
@@ -37,6 +48,16 @@ body {
 
 .page-title {
   @include roboto(400, 40px, $bg_dark, 26px);
+}
+
+
+.visible {
+  display: block !important;
+
+}
+
+button {
+  outline: none;
 }
 
 

@@ -1,10 +1,14 @@
 .call-back {
   padding: 32px 80px;
   margin-bottom: 30px;
-  background-color: #2b542c;
+  background-color: $green_dark;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.seo .call-back {
+  margin-bottom: 50px;
 }
 
 .call-back__desc {
@@ -24,11 +28,24 @@
 
 .header__btn_call-back {
   color: $bg_dark;
+  border: 1px solid transparent;
+  font-size: 20px;
+}
+
+.header__btn.header__btn_call-back {
+  width: auto;
+}
+
+.header__btn.header__btn_call-back:hover {
+  background-color: transparent;
+  border: 1px solid $yellow;
+  color: $yellow;
 }
 
 @media (max-width: 992px) {
   .call-back {
     padding: 30px;
+    margin-bottom: 20px;
   }
   .call-back__desc {
     max-width: 54%;
