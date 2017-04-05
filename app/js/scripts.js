@@ -1,5 +1,8 @@
 <!-- Initialize Swipers -->
 var topSwiper = new Swiper('.slider', {
+    autoplay: 3000,
+    loop: true,
+    speed: 600,
     nextButton: '.slider__control-next',
     prevButton: '.slider__control-prev',
     pagination: '.pagination-white',
@@ -60,6 +63,9 @@ var menuMobile = document.querySelector('.about-us__nav');
 menuButton.addEventListener('click', function () {
     menuMobile.classList.toggle('about-us__nav_active');
     menuButton.classList.toggle('about-us__nav-open_active');
+    if (menuButton.className.indexOf('about-us__nav-open_active') !== -1) {
+        activateSubmenu();
+    }
 });
 
 
@@ -136,15 +142,19 @@ phonesOpen.addEventListener('click', function () {
 
 popupsHander();
 
-var menu = document.querySelectorAll('.about-us__nav-item');
-var innerMenu = document.querySelectorAll('.about-us__inner-menu');
+var activateSubmenu = function() {
+    var menuLinks = document.querySelectorAll('.about-us__nav-item');
 
-for (var i = 0; i <  menu.length; i++) {
-    menu[i].addEventListener('click', function () {
-        for (var j = 0; j < innerMenu.length; j++) {
-            toggleElement(innerMenu[j]);
-        };
-    });
+    for (var i = 0; i < menuLinks.length; i++) {
+        menuLinks[i].addEventListener('click', function (e) {
+                if (this.children[1] && window.innerWidth <= 768) {
+                    toggleElement(this.children[1]);
+                    console.log(this.children[1].className);
+                }
+        });
+    }
+
+
 };
 
 

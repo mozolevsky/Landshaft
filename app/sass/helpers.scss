@@ -38,3 +38,10 @@ $slider_grey2: #4a4b4c;
 @mixin trans($duration: 0.3s) {
   transition: all $duration ease-in-out;
 }
+
+@mixin center($x: 50%, $y: 50%) {
+  position: absolute;
+  top: $y;
+  right: $x;
+  transform: translate(-50%, -50%);
+}
