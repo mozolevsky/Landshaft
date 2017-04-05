@@ -1,0 +1,71 @@
+.works-list {
+  margin: 20px 0 50px 0;
+}
+
+.block__title.works-list__title {
+  margin-bottom: 25px;
+  margin-top: 0;
+  text-align: left;
+}
+
+.works-list_works-item {
+  position: relative;
+  padding: 3px 0;
+  font-size: 18px;
+  line-height: 32px;
+  color: $bg_dark;
+}
+
+.works-list_works-item::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -25px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/green-mark.png");
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+
+.works-list_works {
+  list-style: none;
+  padding-left: 65px;
+}
+
+.services-page_aside {
+  padding: 30px;
+  border-radius: 5px;
+  background-color: $light-grey;
+}
+
+.services-page_aside-title {
+  margin-top: 0;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  color: $bg_dark;
+  text-transform: uppercase;
+}
+
+.services-page_aside-text {
+  font-size: 16px;
+  line-height: 24px;
+  font-style: italic;
+  font-weight: 400;
+  color: $bg_dark;
+}
+
+.services-page__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services-page__list-item a {
+  color: $green_text-dark;
+  text-decoration: underline;
+  font-size: 15px;
+  line-height: 24px;
+}
