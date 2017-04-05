@@ -11,8 +11,11 @@
 @import 'public';
 @import 'footer';
 @import 'seo';
+@import 'breadcrumbs';
+@import 'servicePage';
 @import 'fade';
 @import 'popup';
+
 
 @font-face {
   font-family: Neris;
@@ -43,13 +46,20 @@ body {
   color: rgba(255, 255, 255, 0.75);
 }
 
+.page-title {
+  @include roboto(400, 40px, $bg_dark, 26px);
+}
+
+
 .visible {
-  display: block;
+  display: block !important;
+
 }
 
 button {
   outline: none;
 }
+
 
 @media (max-width: 768px) {
   .block__title {

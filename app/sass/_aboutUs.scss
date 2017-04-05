@@ -182,27 +182,27 @@
     margin: 0 -15px;
     padding: 10px 15px;
     background: transparent;
-    border: none;
-    border-bottom: 1px solid #3a3a3b;
-    font-size: 22px;
-    text-align: center;
-  }
+  border: none;
+  border-bottom: 1px solid #3a3a3b;
+  font-size: 22px;
+  text-align: center;
+}
 
-  .about-us__nav-open span {
-    display: block;
-    position: relative;
-  }
+.about-us__nav-open span {
+  display: block;
+  position: relative;
+}
 
-  .about-us__nav-open-icon {
-    position: absolute;
-    top: 6px;
-    left: -40px;
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: white;
-    transition: all 0.5s ease-in-out;
-  }
+.about-us__nav-open-icon {
+  position: absolute;
+  top: 6px;
+  left: -40px;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+}
 
   .about-us__nav-open-icon::before,
   .about-us__nav-open-icon::after {
@@ -271,7 +271,11 @@
   }
 
   .about-us__nav-item:hover .about-us__inner-menu {
-    opacity: 0;
+    display: none;
+  }
+
+  .about-us__inner-menu {
+    position: relative;
   }
 
 }
