@@ -30,3 +30,14 @@
   background: url('../img/breadcrumbs-arrow.png') no-repeat center;
 }
 
+@media (max-width: 768px) {
+  .breadcrumbs {
+    display: none;
+  }
+
+  .service-slider__container {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+}

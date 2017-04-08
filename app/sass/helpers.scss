@@ -18,6 +18,7 @@ $grad_green_light2: #64b12b;
 $grad_grey1: #5b5b5d;
 $grad_grey2: #3e3e3f;
 
+
 $grad_blue1: #4269c3;
 $grad_blue2: #284aae;
 
@@ -27,6 +28,8 @@ $slider_blue3: #4167bd;
 
 $slider_grey1: #3f3f41;
 $slider_grey2: #4a4b4c;
+
+$red: #ff0000;
 
 @mixin roboto($weight: 400, $size: 16px, $color: rgba(255, 255, 255, 1), $lHeight: 30px) {
   font-family: 'Roboto', 'Arial', sans-serif;
