@@ -2098,10 +2098,87 @@
           justify-content: center;
   margin-bottom: 45px; }
 
+.service-slider2__pagination {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-basis: 60%;
+      -ms-flex-preferred-size: 60%;
+          flex-basis: 60%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+
+.page-title__service-slider2 {
+  text-align: center;
+  margin-bottom: 35px; }
+
+.service-slider2__parts-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 377px;
+  -webkit-flex: 377px;
+      -ms-flex: 377px;
+          flex: 377px; }
+
+.service-slider2__slide-part {
+  -webkit-flex-basis: 377px;
+      -ms-flex-preferred-size: 377px;
+          flex-basis: 377px; }
+
+.service-slider2__img-wrapper {
+  margin-bottom: 12px;
+  margin-right: 6px;
+  overflow: hidden; }
+
+.service-slider2__img {
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.service-slider2__img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); }
+
+.service-slider2__title {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #78be40;
+  line-height: 28px;
+  text-decoration: underline;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.service-slider2__title:hover {
+  cursor: pointer;
+  color: #242425; }
+
+.service-block__price_slider2 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #242425; }
+
 @media (max-width: 1200px) {
   .ext-money {
     width: 450px;
-    margin-top: -370px; } }
+    margin-top: -370px; }
+  .service-slider2__pagination {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; } }
 
 @media (max-width: 992px) {
   .service-slider {
@@ -2116,6 +2193,8 @@
     font-style: italic; }
   .service-slider__pagination {
     display: none; }
+  .service-slider__pagination-link {
+    font-size: 18px; }
   .service-slider__prices {
     display: none; }
   .service-slider__common-prices {
@@ -2124,7 +2203,14 @@
     margin-top: 60px;
     width: 100%; }
   .ext-money__subtitle {
-    text-align: center; } }
+    text-align: center; }
+  .service-slider2__slide-part {
+    -webkit-box-flex: 235px;
+    -webkit-flex: 235px;
+        -ms-flex: 235px;
+            flex: 235px; }
+  .service-slider2__img {
+    height: 200px; } }
 
 @media (max-width: 768px) {
   .service-slider {
@@ -2211,6 +2297,8 @@
     text-align: left;
     margin-bottom: 10px; }
   .service__call-back-2 {
+    display: none; }
+  .service-slider2 {
     display: none; } }
 
 .fade-block {
