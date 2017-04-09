@@ -14,3 +14,53 @@
   color: $bg_dark;
   font-weight: 400;
 }
+
+@media (max-width: 992px) {
+  .block__title.recomend__title {
+    margin-bottom: 25px;
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .recomend__content {
+    margin-bottom: 25px;
+  }
+
+  .recomend__text {
+    font-size: 16px;
+  }
+
+  .recomend__aside-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .recomend {
+    margin-bottom: 0;
+  }
+
+  .block__title.recomend__title {
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .recomend__aside {
+    background-color: $light-grey;
+    border-radius: 0;
+    margin: 0 -15px;
+    padding: 30px 15px;
+  }
+
+  .recomend__aside-title {
+    font-size: 18px;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+
+  .services-page__list-item a {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}

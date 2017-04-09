@@ -56,6 +56,34 @@ var publicSwiper = new Swiper('.public__slider', {
     keyboardControl: true
 });
 
+var servicesAdvSwiper = new Swiper('.advantages_slider', {
+    pagination: '.advantages__pagination',
+    paginationClickable: true,
+    keyboardControl: true,
+    breakpoints: {
+        // when window width is <= 320px
+        320: {
+            slidesPerView: 1,
+        },
+        // when window width is <= 480px
+        480: {
+            slidesPerView: 1,
+        },
+        // when window width is <= 768px
+        768: {
+            slidesPerView: 1,
+        },
+        // when window width is <= 768px
+        1200: {
+            slidesPerView: 4,
+        },
+        // when window width is <= 768px
+        1920: {
+            slidesPerView: 4,
+        }
+    }
+});
+
 
 var menuButton = document.querySelector('.about-us__nav-open');
 var menuMobile = document.querySelector('.about-us__nav');
