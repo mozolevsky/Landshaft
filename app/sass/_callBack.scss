@@ -71,7 +71,7 @@
   }
 
   .call-back__phone {
-    font-size: 28px;
+    font-size: 27px;
   }
 
   .header__btn_call-back {
@@ -85,5 +85,14 @@
 
   .call-back_last {
     margin: 0 -15px
+  }
+
+  .call-back__service {
+    margin: 0 -15px;
+    padding: 30px 5px;
+  }
+
+  .call-back__service .popup__order-tel {
+    font-size: 18px;
   }
 }
