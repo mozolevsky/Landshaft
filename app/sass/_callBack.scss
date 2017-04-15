@@ -42,6 +42,10 @@
   color: $yellow;
 }
 
+.button__pulse-animate {
+  animation: pulse 1.2s ease infinite;
+}
+
 @media (max-width: 992px) {
   .call-back {
     padding: 30px;
@@ -87,3 +91,5 @@
     margin: 0 -15px
   }
 }
+
+
