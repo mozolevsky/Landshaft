@@ -28,7 +28,7 @@
 
 .service-slider__pagination-link {
   position: relative;
-  margin-right: 28px;
+  padding-right: 20px;
   color: $green_medium;
   line-height: 25px;
   padding-bottom: 10px;
@@ -122,7 +122,7 @@
 .service-block__item::before {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 13px;
   left: 0;
   display: block;
   width: 10px;
@@ -393,6 +393,7 @@
 
   .service-block__list {
     margin-left: 0;
+    margin-right: -50px;
   }
 
   .service-slider__buttons-wrapper {
@@ -410,6 +411,7 @@
 
   .service__call-back-1 {
     display: block;
+    margin: 0 -15px;
     line-height: 26px;
   }
 
@@ -425,6 +427,8 @@
   .ext-money__item {
     flex-direction: row;
     align-items: flex-start;
+    margin-right: 0;
+    flex-basis: 110px;
   }
 
   .ext-money__img-wrapper {
@@ -433,6 +437,7 @@
 
   .ext-money__info {
     align-items: flex-start;
+    height: 110px;
   }
 
   .ext-money__desc {
@@ -445,6 +450,14 @@
   }
 
   .service-slider2 {
+    display: none;
+  }
+
+  .page-subtitle {
+    text-transform: none;
+  }
+
+  .service-slider__common-subtitle {
     display: none;
   }
 }

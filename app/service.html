@@ -16,13 +16,16 @@
     <div class="container">
         <div class="header__logo">
             <a href="index.html">
-                <img src="img/logo.png">
+                <picture>
+                    <source srcset="img/logo_mobile.png" media="(max-width: 768px)">
+                    <img src="img/logo.png">
+                </picture>
             </a>
         </div>
         <div class="header__nav">
             <p class="header__nav-time">Ежедневно с 9.00 до 19.00. Москва и МО</p>
             <ul class="header__nav-block">
-                <li class="header__nav-item"><a href="#">Портфолио</a></li>
+                <li class="header__nav-item"><a href="work.html">Портфолио</a></li>
                 <li class="header__nav-item"><a href="#">О нас</a></li>
                 <li class="header__nav-item"><a href="#">Контакты</a></li>
             </ul>
@@ -30,13 +33,13 @@
         <div class="header__contacts">
             <button class="header__phones-icon"></button>
             <div class="header__contacts-main-block">
+                <button class="popup__close header__phones-close"></button>
                 <div class="header__phones">
-                    <p class="header__phones-title">Наши телефоны</p>
-                    <span class="header__phones-close"></span>
+                    <p class="header__popup-title popup__title">Наши телефоны</p>
                     <p class="header__phones-item">+7 (495) 797-09-08</p>
                     <p class="header__phones-item">+7 (903) 797-09-08</p>
                 </div>
-                <button class="header__btn header__btn_call">Заказать звонок</button>
+                <button class="header__btn popup__order-tel header__btn_call">Заказать звонок</button>
             </div>
         </div>
     </div>
@@ -354,7 +357,7 @@
                     </div>
                       <!-- блок общих стилей для 3ех видов работ, отображатся только на планшете и моб. устройствах -->
                         <div class="service-slider__prices service-slider__common-prices">
-                            <div class="page-subtitle">Цены на работы по укладке дорожек</div>
+                            <div class="page-subtitle service-slider__common-subtitle">Цены на работы по укладке дорожек</div>
                             <div class="service-block">
                                 <div class="service-block__description-wrapper">
                                     <div class="service-block__title">Укладка клинкерной брусчатки на подготовленное основание</div>
@@ -366,7 +369,25 @@
                             </div>
                             <div class="service-block">
                                 <div class="service-block__description-wrapper">
-                                    <div class="service-block__title">Укладка клинкерной брусчатки на подготовленное основание</div>
+                                    <div class="service-block__title">Мощение природным камнем</div>
+                                </div>
+                                <div class="service-block__price">
+                                    <span class="service-block__price-value">990</span>
+                                    <i class="service-block__units"> ₽/м²</i>
+                                </div>
+                            </div>
+                            <div class="service-block">
+                                <div class="service-block__description-wrapper">
+                                    <div class="service-block__title">Мощение тротуарной плиткой</div>
+                                </div>
+                                <div class="service-block__price">
+                                    <span class="service-block__price-value">660</span>
+                                    <i class="service-block__units"> ₽/м²</i>
+                                </div>
+                            </div>
+                            <div class="service-block">
+                                <div class="service-block__description-wrapper">
+                                    <div class="service-block__title">Подготовка основания по укладку</div>
                                     <div class="service-block__desc">
                                         <p>(включая материалы)</p>
                                         <ul class="service-block__list">
@@ -379,35 +400,38 @@
                                     </div>
                                 </div>
                                 <div class="service-block__price">
-                                    <span class="service-block__price-value">850</span>
+                                    <span class="service-block__price-value">1990</span>
                                     <i class="service-block__units"> ₽/м²</i>
                                 </div>
                             </div>
                             <div class="service-block">
                                 <div class="service-block__description-wrapper">
-                                    <div class="service-block__title">Укладка клинкерной брусчатки на подготовленное основание</div>
+                                    <div class="service-block__title">Подготовка бетонного основания</div>
                                     <div class="service-block__desc">
-                                        <p>(включая материалы)</p>
+                                        <p>(парковка, заезд)</p>
                                         <ul class="service-block__list">
-                                            <li class="service-block__item">Песок сеяный;</li>
                                             <li class="service-block__item">Щебень известковый 20-40мм;</li>
-                                            <li class="service-block__item">Дорожная сетка 50x50мм;</li>
-                                            <li class="service-block__item">Геотекстиль 300 г/м2;</li>
-                                            <li class="service-block__item">Монтажные и расходные материалы</li>
+                                            <li class="service-block__item">Дорожная сетка 100х100х4мм;</li>
+                                            <li class="service-block__item">Геотекстиль 300 г/м²;</li>
+                                            <li class="service-block__item">Бетон миксер (м300);</li>
+                                            <li class="service-block__item">Доска 25x100 мм;</li>
+                                            <li class="service-block__item">Брус 40x40 мм;</li>
+                                            <li class="service-block__item">Саморезы по дереву 3.5x45 мм;</li>
+                                            <li class="service-block__item">Монтажные и расходные материалы.</li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="service-block__price">
-                                    <span class="service-block__price-value">850</span>
+                                    <span class="service-block__price-value">2490</span>
                                     <i class="service-block__units"> ₽/м²</i>
                                 </div>
                             </div>
                             <div class="service-block">
                                 <div class="service-block__description-wrapper">
-                                    <div class="service-block__title">Укладка клинкерной брусчатки на подготовленное основание</div>
+                                    <div class="service-block__title">Установка бордюра на подготовленное основание</div>
                                 </div>
                                 <div class="service-block__price">
-                                    <span class="service-block__price-value">850</span>
+                                    <span class="service-block__price-value">490</span>
                                     <i class="service-block__units"> ₽/м²</i>
                                 </div>
                             </div>
@@ -617,7 +641,6 @@
 
     <div class="container">
         <div class="call-back call-back__service call-back-2">
-
             <p class="call-back__desc">Хотите посчитать стоимость своей дорожки с материалами и работой? Воспользуйтесь нашим калькулятором</p>
             <button class="header__btn header__btn_call-back">Калькулятор дорожек</button>
         </div>
@@ -943,13 +966,38 @@
             </div>
         </div>
     </footer>
+
+    <div class="fade-block">
+        <!-- POPUP CALL ME -->
+        <div class="popup popup__call-me">
+            <button class="popup__close"></button>
+            <p class="popup__title">Перезвоните мне</p>
+            <input class="popup__input" id="popup__input" type="tel" placeholder="+7 (___) ___-__-__" required>
+            <button class="header__btn popup__send-tel" type="submit">Жду звонка</button>
+        </div>
+
+        <!-- POPUP THANK YOU -->
+        <div class="popup popup__thank-you">
+            <button class="popup__close"></button>
+            <p class="popup__title">Спасибо за заявку</p>
+            <p class="popup__text">В ближайше время наш специалист свяжется с вами.</p>
+        </div>
+
+        <!-- POPUP DON'T WORK-->
+        <div class="popup popup__not-work">
+            <button class="popup__close"></button>
+            <p class="popup__title">Мы сейчас не работаем</p>
+            <p class="popup__text">Если вы оставите свой номер, мы перезвоним на него.</p>
+            <button class="header__btn popup__order-tel popup__call-back">Заказать звонок</button>
+        </div>
+    </div>
 </div>
 <script src="libs/swiper/dist/js/swiper.min.js"></script>
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="js/keyCodeHandler.js"></script>
 <script src="js/js_inputmask.js"></script>
 <script src="js/inputmask.js"></script>
-<script src="js/scripts.min.js"></script>
+<script src="js/scripts.js"></script>
 
 <!-- Initialize Swiper -->
 <script>

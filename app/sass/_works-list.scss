@@ -103,6 +103,7 @@
 
 @media (max-width: 768px) {
   .works-list {
+    margin-top: 0;
     margin-bottom: 10px;
   }
 
@@ -133,6 +134,7 @@
 
   .works-list_works-item {
     padding: 1px 0;
+    line-height: 22px;
   }
 
   .works-list_works-item::before {

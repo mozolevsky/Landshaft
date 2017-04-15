@@ -1,0 +1,224 @@
+.work-page__page-title {
+  margin-top: 40px;
+}
+
+.work-page__left-block-title {
+  @include roboto;
+  font-size: 34px;
+  line-height: 40px;
+  color: $bg_dark;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.work-page__right-block {
+  margin-left: 30px;
+  margin-top: 110px;
+}
+
+.work-page__right-block-title {
+  font-size: 22px;
+}
+
+.work-page__right-block-link a {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.work-page__info {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.work-page__text {
+  margin-bottom: 30px;
+}
+
+.work-page__item-desc {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.work-page__desc-item {
+  margin: 0;
+  font-size: 14px;
+}
+
+.work-page__buttons {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.work-page__pagination-item {
+  position: relative;
+  padding: 5px;
+  background-color: transparent;
+  border: 1px solid $green_text-dark;
+  border-radius: 5px;
+  color: $green_text-dark;
+  transition: all 0.3s ease-in-out;
+  flex-basis: 30%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.work-page__pagination-prev::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  left: 10px;
+  display: block;
+  width: 30px;
+  height: 10px;
+  background-image: url("../img/arrow_prev.png");
+  background-repeat: no-repeat;
+  transform: rotate(-180deg);
+}
+
+.work-page__pagination-next::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: 10px;
+  display: block;
+  width: 30px;
+  height: 10px;
+  background-image: url("../img/arrow_prev.png");
+  background-repeat: no-repeat;
+}
+
+.work-page__pagination-item:hover,
+.work-page__pagination-item:active,
+.work-page__pagination-item:focus {
+  background-color: $green_text-medium;
+  color: white;
+  text-decoration: none;
+}
+
+.work-page__pagination-prev:hover.work-page__pagination-prev::before {
+  background-image: url("../img/arrow_white.png");
+}
+
+.work-page__pagination-next:hover.work-page__pagination-next::after {
+  background-image: url("../img/arrow_white.png");
+}
+
+@media (max-width: 992px) {
+  .work-page__page-title {
+    width: 570px;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+  .work-page__right-block {
+    margin: 0;
+    padding: 30px;
+    background-color: $light-grey;
+    border-radius: 7px;
+  }
+
+  .work-page__long-des.row {
+    margin-bottom: 30px;
+  }
+
+  .work-page__item-desc {
+    margin-top: 25px;
+    background-color: $light-grey;
+    padding: 15px 27px;
+    border-radius: 7px;
+  }
+
+  .work-page__desc-item {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .work-page__info {
+    flex-wrap: wrap;
+  }
+
+  .work-page__pagination-prev {
+    padding-left: 35px;
+  }
+
+  .work-page__pagination-next {
+    padding-right: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title.work-page__page-title {
+    width: 100%;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .work-page__right-block {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .work-page__right-block-title {
+    text-align: left;
+  }
+
+  .work-page__left-block-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    color: $green_text-dark;
+  }
+
+  .work-page__desc-item {
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  .work-page__item-desc {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .work-page__text {
+    line-height: 25px;
+  }
+
+  .work-page__buttons {
+    flex-wrap: wrap;
+  }
+
+  .work-page__pagination-item {
+    flex-basis: 48%;
+  }
+
+  .work-page__pagination-item-center {
+    order: 1;
+    flex-basis: 100%;
+    margin-top: 10px;
+  }
+
+  .work-page__pagination-item .mobile {
+    display: none;
+  }
+
+  .work-page__pagination-prev::before {
+    left: 0;
+  }
+
+  .work-page__pagination-next::after {
+    right: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .work-page__pagination-item {
+    font-size: 14px;
+  }
+}
