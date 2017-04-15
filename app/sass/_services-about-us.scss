@@ -1,0 +1,114 @@
+.services-about-us {
+  margin-bottom: 30px;
+  background-color: $bg_dark;
+}
+
+.services-about-us__item-title {
+  font-size: 16px;
+  line-height: 30px;
+  color: $grad_green_light1;
+  text-transform: uppercase;
+}
+
+.services-about-us__item-text {
+  font-size: 14px;
+  line-height: 22px;
+  color: white;
+  opacity: 0.5;
+}
+
+.services-about-us__item {
+  padding: 25px 0 25px 60px;
+}
+
+.services-about-us__item::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 0;
+  display: block;
+  width: 53px;
+  height: 53px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.services-about-us__item_1::before {
+  background-image: url("../img/serv_about_us1.png");
+}
+
+.services-about-us__item_2::before {
+  background-image: url("../img/serv_about_us2.png");
+}
+
+.services-about-us__item_3::before {
+  background-image: url("../img/adv3.png");
+}
+
+@media (max-width: 992px) {
+  .services-about-us {
+    padding-bottom: 35px;
+  }
+
+  .services-about-us__item {
+    padding-bottom: 0;
+    padding-left: 70px;
+  }
+
+  .services-about-us__item-text {
+    margin-bottom: 0;
+  }
+
+  .services-about-us__item::before {
+    top: 40px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-about-us {
+    padding-bottom: 0;
+    background-color: white;
+  }
+
+  .services-about-us__item {
+    margin: 5px -10px;
+    padding: 27px;
+  }
+
+  .services-about-us__item::before {
+    display: none;
+  }
+
+  .services-about-us__item-title {
+    margin-top: 0;
+  }
+
+  .services-about-us__item_1 {
+    background-image: linear-gradient(to bottom right, $grad_green_dark1, $grad_green_dark2);
+  }
+
+  .services-about-us__item_2 {
+    background-image: linear-gradient(to bottom right, $grad_grey1, $grad_grey2);
+  }
+
+  .services-about-us__item_3 {
+    background-image: linear-gradient(to bottom right, $grad_blue1, $grad_blue2);
+  }
+
+  .services-about-us__item-title {
+    color: white;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 700;
+  }
+
+  .services-about-us__item-text {
+    font-size: 16px;
+    color: white;
+    opacity: 1;
+  }
+}

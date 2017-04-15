@@ -6,6 +6,7 @@
   margin-bottom: 25px;
   margin-top: 0;
   text-align: left;
+  color: $dark-grey;
 }
 
 .works-list_works-item {
@@ -42,10 +43,10 @@
 
 .services-page_aside-title {
   margin-top: 0;
-  font-size: 22px;
+  font-size: 21px;
   line-height: 32px;
   font-weight: 400;
-  color: $bg_dark;
+  color: $dark-grey;
   text-transform: uppercase;
 }
 
@@ -68,4 +69,77 @@
   text-decoration: underline;
   font-size: 15px;
   line-height: 24px;
+}
+
+@media (max-width: 992px) {
+  .works-list {
+    margin-bottom: 30px;
+  }
+
+  .block__title.works-list__title {
+    margin-bottom: 15px;
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .works-list_works-item {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .services-page_aside-title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .works-list_works {
+    padding-left: 27px;
+  }
+
+  .services-page_aside {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .works-list {
+    margin-bottom: 10px;
+  }
+
+  .block__title.works-list__title {
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .works-list__content {
+    padding-bottom: 15px;
+  }
+
+  .services-page_aside-title {
+    font-size: 26px;
+    text-transform: none;
+    text-align: center;
+  }
+
+  .services-page_aside {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .services-page_aside-text {
+    font-style: normal;
+  }
+
+  .works-list_works-item {
+    padding: 1px 0;
+  }
+
+  .works-list_works-item::before {
+    top: 15px;
+    background-image: none;
+    width: 12px;
+    height: 1px;
+    background-color: $green_medium;
+  }
 }
