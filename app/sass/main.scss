@@ -18,6 +18,8 @@
 @import 'works-list';
 @import 'recomend';
 @import 'advantages';
+@import 'projects-row';
+@import 'animations';
 @import 'services-about-us';
 @import 'work-page';
 
@@ -45,6 +47,10 @@ body {
   text-align: center;
   margin-bottom: 35px;
   font-weight: 400;
+}
+
+.block__title_left {
+  text-align: left;
 }
 
 .block__title_white {
