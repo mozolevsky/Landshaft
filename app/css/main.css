@@ -2186,7 +2186,11 @@
   -webkit-flex-basis: 60%;
       -ms-flex-preferred-size: 60%;
           flex-basis: 60%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  /*border-bottom: 1px solid rgba(0, 0, 0, 0.2);*/ }
+
+.service-slider2__pagination .service-slider__pagination-link {
+  width: 33.4%;
+  text-align: center; }
 
 .page-title__service-slider2 {
   text-align: center;
