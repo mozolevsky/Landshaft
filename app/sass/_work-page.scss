@@ -111,6 +111,10 @@
   background-image: url("../img/arrow_white.png");
 }
 
+.work-page__desc-item:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 992px) {
   .work-page__page-title {
     width: 570px;

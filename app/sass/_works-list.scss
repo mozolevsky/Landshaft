@@ -2,6 +2,10 @@
   margin: 20px 0 50px 0;
 }
 
+.works-list-project {
+  display: none;
+}
+
 .block__title.works-list__title {
   margin-bottom: 25px;
   margin-top: 0;
@@ -105,6 +109,10 @@
   .works-list {
     margin-top: 0;
     margin-bottom: 10px;
+  }
+
+  .works-list-project {
+    display: block;
   }
 
   .block__title.works-list__title {

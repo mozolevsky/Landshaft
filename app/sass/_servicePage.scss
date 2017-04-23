@@ -17,9 +17,8 @@
 
 .service-slider__pagination {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-basis: 60%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .service-slider__pagination-bullets {
@@ -32,6 +31,8 @@
   color: $green_medium;
   line-height: 25px;
   padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 30%;
 }
 
 .service-slider__pagination-link_active {
@@ -88,7 +89,8 @@
 }
 
 .service-block__desc > p {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .service-block__price {
@@ -105,6 +107,15 @@
 
 .service-block__units {
   width: 43px;
+}
+
+.service-block__units_wide {
+  width: 90px;
+}
+
+.service-block__units_min {
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .service-block__list {
@@ -171,6 +182,10 @@
   width: 500px;
   flex-direction: column;
   margin-top: -290px;
+}
+
+.ext-money_proekt {
+  margin-top: 0;
 }
 
 .ext-money__wrapper {
