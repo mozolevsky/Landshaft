@@ -439,7 +439,8 @@
     text-align: center; }
   .about-us__nav-open span {
     display: block;
-    position: relative; }
+    position: relative;
+    margin: 0 auto; }
   .about-us__nav-open-icon {
     position: absolute;
     top: 6px;
@@ -1971,10 +1972,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 100px;
-  -webkit-flex: 100px;
-      -ms-flex: 100px;
-          flex: 100px;
+  /*  flex: 100px;*/
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
@@ -2064,13 +2062,14 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 500px;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: -290px; }
+  color: #242425;
+  margin-bottom: 60px; }
 
 .ext-money_proekt {
   margin-top: 0; }
@@ -2090,9 +2089,9 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-flex-basis: 30%;
-      -ms-flex-preferred-size: 30%;
-          flex-basis: 30%; }
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%; }
 
 .ext-money__item {
   margin-right: 20px;
@@ -2111,7 +2110,7 @@
           align-items: center; }
 
 .ext-money__img-wrapper {
-  width: 83px;
+  width: auto;
   height: 50px;
   text-align: center;
   margin-bottom: 25px; }
@@ -2129,12 +2128,34 @@
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  padding-top: 90px;
+  background-repeat: no-repeat;
+  background-position: top center; }
+
+.ext-money__wood-icon {
+  background-image: url("../img/wood-icon.png"); }
+
+.ext-money__track-icon {
+  background-image: url("../img/track-icon.png"); }
+
+.ext-money__cart-icon {
+  background-image: url("../img/cart-icon.png"); }
+
+.ext-money__theodolite-icon {
+  background-image: url("../img/ext-money_proekt1.png"); }
+
+.ext-money__plan-icon {
+  background-image: url("../img/ext-money_proekt2.png"); }
+
+.ext-money__question-icon {
+  background-image: url("../img/ext-money_proekt3.png"); }
 
 .ext-money__desc {
   text-align: center;
   line-height: 22px;
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  width: 90%; }
 
 .service-slider2 {
   padding-top: 36px;
@@ -2227,9 +2248,6 @@
   color: #242425; }
 
 @media (max-width: 1200px) {
-  .ext-money {
-    width: 450px;
-    margin-top: -370px; }
   .service-slider2__pagination {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
@@ -2308,6 +2326,10 @@
   .service-block__list {
     margin-left: 0;
     margin-right: -50px; }
+  .service-block__description-wrapper {
+    width: 60%; }
+  .service-block__price {
+    font-size: 19px; }
   .service-slider__buttons-wrapper {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -2322,7 +2344,8 @@
     margin: 0 -15px;
     line-height: 26px; }
   .ext-money {
-    margin-top: 36px; }
+    margin-top: 36px;
+    margin-bottom: 30px; }
   .ext-money__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2344,9 +2367,9 @@
         -ms-flex-align: start;
             align-items: flex-start;
     margin-right: 0;
-    -webkit-flex-basis: 110px;
-        -ms-flex-preferred-size: 110px;
-            flex-basis: 110px; }
+    -webkit-flex-basis: 30%;
+        -ms-flex-preferred-size: 30%;
+            flex-basis: 30%; }
   .ext-money__img-wrapper {
     margin-right: 20px; }
   .ext-money__info {
@@ -2354,7 +2377,18 @@
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start;
-    height: 110px; }
+    height: 110px;
+    padding-top: 0;
+    padding-left: 105px;
+    background-position: left center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 60%;
+    margin-left: 15px; }
+  .ext-money__question-icon {
+    background-size: 90px; }
   .ext-money__desc {
     text-align: left;
     margin-bottom: 10px; }
