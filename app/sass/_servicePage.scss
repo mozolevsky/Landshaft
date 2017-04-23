@@ -99,7 +99,8 @@
   line-height: 23px;
   display: flex;
   min-width: 125px;
-  justify-content: flex-end;
+  justify-content: center;
+  font-weight: 700;
 }
 
 .service-block__price-value {
@@ -177,13 +178,10 @@
 
 .ext-money {
   display: flex;
-  width: 500px;
+  width: 100%;
   flex-direction: column;
-  margin-top: -290px;
-}
-
-.ext-money_proekt {
-  margin-top: 0;
+  color: $bg_dark;
+  margin-bottom: 45px;
 }
 
 .ext-money__wrapper {
@@ -191,7 +189,7 @@
   flex-direction: row;
   margin-top: 20px;
   justify-content: space-between;
-  flex-basis: 30%;
+  flex-basis: 100%;
 }
 
 .ext-money__item {
@@ -202,7 +200,7 @@
 }
 
 .ext-money__img-wrapper {
-  width: 83px;
+  width: auto;
   height: 50px;
   text-align: center;
   margin-bottom: 25px;
@@ -212,6 +210,29 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 90px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+$ext-money-icons: (
+        wood: url('../img/wood-icon.png'),
+        track: url('../img/track-icon.png'),
+        cart: url('../img/cart-icon.png'),
+        theodolite: url('../img/ext-money_proekt1.png'),
+        plan: url('../img/ext-money_proekt2.png'),
+        question: url('../img/ext-money_proekt3.png'),
+        trans: url('../img/ext-money_gazon1.png'),
+        water: url('../img/ext-money_gazon2.png'),
+        garden: url('../img/ext-money_gazon3.png')
+);
+
+.ext-money {
+  @each $name, $url in $ext-money-icons {
+    &__#{$name}-icon {
+      background-image: $url;
+    }
+  }
 }
 
 
@@ -219,6 +240,7 @@
   text-align: center;
   line-height: 22px;
   margin-bottom: 24px;
+  width: 90%;
 }
 
 .service-slider2 {
@@ -291,8 +313,7 @@
 
 @media (max-width: 1200px) {
   .ext-money {
-    width: 450px;
-    margin-top: -370px;
+
   }
 
   .service-slider2__pagination {
@@ -365,6 +386,19 @@
     padding-bottom: 30px;
   }
 
+  .service-block__desc > p {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .service-block__units {
+    font-size: 16px;
+  }
+
+  .service-block__units_min {
+    font-size: 12px;
+  }
+
   .service-slider__pagination-bullets {
     display: flex;
     position: absolute;
@@ -411,6 +445,14 @@
     margin-right: -50px;
   }
 
+  .service-block__description-wrapper {
+    width: 60%;
+  }
+
+ .service-block__price {
+   font-size: 19px;
+ }
+
   .service-slider__buttons-wrapper {
     flex-wrap: wrap;
   }
@@ -432,18 +474,20 @@
 
   .ext-money {
     margin-top: 36px;
+    margin-bottom: 30px;
   }
 
   .ext-money__wrapper {
     flex-direction: column;
-    flex: 330px;
+    min-height: 330px;
   }
 
   .ext-money__item {
     flex-direction: row;
     align-items: flex-start;
     margin-right: 0;
-    flex-basis: 110px;
+    margin-bottom: 15px;
+    flex-basis: 30%;
   }
 
   .ext-money__img-wrapper {
@@ -452,7 +496,17 @@
 
   .ext-money__info {
     align-items: flex-start;
-    height: 110px;
+    min-height: 110px;
+    padding-top: 0;
+    padding-left: 105px;
+    background-position: left center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 15px;
+  }
+
+  .ext-money__question-icon {
+    background-size: 90px;
   }
 
   .ext-money__desc {
