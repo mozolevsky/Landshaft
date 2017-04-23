@@ -54,6 +54,18 @@
   background-size: 125px;
 }
 
+.advantages__item_7 {
+  background-image: url("../img/serv_adv7.png");
+  background-position: center 30px;
+  background-size: 125px;
+}
+
+.advantages__item_8 {
+  background-image: url("../img/serv_adv8.png");
+  background-position: center 20px;
+  background-size: 125px;
+}
+
 .advantages__item-title {
   font-size: 14px;
   line-height: 20px;
@@ -103,6 +115,7 @@
   }
 
   .advantages__title {
+    margin-bottom: 0;
     font-size: 26px;
     line-height: 32px;
     text-transform: none;

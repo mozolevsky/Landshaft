@@ -987,7 +987,8 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 16px;
-  line-height: 30px; }
+  line-height: 30px;
+  margin: 5px 0; }
 
 .projects__desc-item:last-child {
   margin-bottom: 100px; }
@@ -1962,7 +1963,8 @@
 
 .service-block__desc > p {
   margin-bottom: 10px;
-  margin-top: 10px; }
+  margin-top: 10px;
+  font-size: 18px; }
 
 .service-block__price {
   font-size: 20px;
@@ -1971,10 +1973,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 100px;
-  -webkit-flex: 100px;
-      -ms-flex: 100px;
-          flex: 100px;
+  min-width: 125px;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
@@ -1984,10 +1983,7 @@
   margin-right: 5px; }
 
 .service-block__units {
-  width: 43px; }
-
-.service-block__units_wide {
-  width: 90px; }
+  min-width: 43px; }
 
 .service-block__units_min {
   font-size: 14px;
@@ -2001,7 +1997,8 @@
 
 .service-block__item {
   position: relative;
-  padding-left: 20px; }
+  padding-left: 20px;
+  font-size: 16px; }
 
 .service-block__item::before {
   content: '';
@@ -2300,6 +2297,8 @@
     border: 1px solid #4a4b4c; }
   .service-slider__common-prices {
     margin-bottom: 40px; }
+  .service-block__price {
+    font-weight: 700; }
   .service-slider__img-title {
     display: none; }
   .service-block__title {
@@ -2669,6 +2668,12 @@
   color: #242425;
   font-weight: 400; }
 
+.recomend__img {
+  width: 100%; }
+
+.recomend__img img {
+  width: 100%; }
+
 @media (max-width: 992px) {
   .block__title.recomend__title {
     margin-bottom: 25px;
@@ -2752,6 +2757,16 @@
   background-position: center 20px;
   background-size: 125px; }
 
+.advantages__item_7 {
+  background-image: url("../img/serv_adv7.png");
+  background-position: center 30px;
+  background-size: 125px; }
+
+.advantages__item_8 {
+  background-image: url("../img/serv_adv8.png");
+  background-position: center 20px;
+  background-size: 125px; }
+
 .advantages__item-title {
   font-size: 14px;
   line-height: 20px;
@@ -2787,6 +2802,7 @@
     margin-bottom: 20px;
     background-color: white; }
   .advantages__title {
+    margin-bottom: 0;
     font-size: 26px;
     line-height: 32px;
     text-transform: none; }
