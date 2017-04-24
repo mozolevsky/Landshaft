@@ -965,7 +965,8 @@
 
 .projects__item-desc_portfolio {
   height: auto;
-  position: relative; }
+  position: relative;
+  margin-bottom: 0; }
 
 .projects__item-title {
   display: block;
