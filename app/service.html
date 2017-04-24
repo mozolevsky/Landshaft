@@ -503,7 +503,7 @@
                             <div class="service-slider2__slider swiper-slide">
                                 <div class="page-title page-title__service-slider2">Выбрать цвет клинкерной плитки</div>
                                 <div class="service-slider2__parts-wrapper">
-                                    <div class="service-slider2__slide-part">
+                                    <div class="service-slider2__slide-part" data-project="0">
                                         <div class="service-slider2__img-wrapper">
                                             <a href="#">
                                                 <img src="img/service-slider-img.png" alt="" class="service-slider2__img">
@@ -515,7 +515,7 @@
                                             <i class="service-block__units"> ₽/м²</i>
                                         </div>
                                     </div>
-                                    <div class="service-slider2__slide-part">
+                                    <div class="service-slider2__slide-part" data-project="1">
                                         <div class="service-slider2__img-wrapper">
                                             <a href="#">
                                                 <img src="img/service-slider-img2.png" alt="" class="service-slider2__img">
@@ -527,7 +527,7 @@
                                             <i class="service-block__units"> ₽/м²</i>
                                         </div>
                                     </div>
-                                    <div class="service-slider2__slide-part">
+                                    <div class="service-slider2__slide-part" data-project="2">
                                         <div class="service-slider2__img-wrapper">
                                             <a href="#">
                                                 <img src="img/service-slider-img3.png" alt="" class="service-slider2__img">
@@ -544,7 +544,7 @@
                             <div class="service-slider2__slider swiper-slide">
                                 <div class="page-title page-title__service-slider2">Выбрать цвет камня</div>
                                 <div class="service-slider2__parts-wrapper">
-                                    <div class="service-slider2__slide-part">
+                                    <div class="service-slider2__slide-part" data-project="3">
                                         <div class="service-slider2__img-wrapper">
                                             <a href="#">
                                                 <img src="img/service-slider-img.png" alt="" class="service-slider2__img">
@@ -556,7 +556,7 @@
                                             <i class="service-block__units"> ₽/м²</i>
                                         </div>
                                     </div>
-                                    <div class="service-slider2__slide-part">
+                                    <div class="service-slider2__slide-part" data-project="4">
                                         <div class="service-slider2__img-wrapper">
                                             <a href="#">
                                                 <img src="img/service-slider-img2.png" alt="" class="service-slider2__img">
@@ -568,7 +568,7 @@
                                             <i class="service-block__units"> ₽/м²</i>
                                         </div>
                                     </div>
-                                    <div class="service-slider2__slide-part">
+                                    <div class="service-slider2__slide-part" data-project="5">
                                         <div class="service-slider2__img-wrapper">
                                             <a href="#">
                                                 <img src="img/service-slider-img3.png" alt="" class="service-slider2__img">
@@ -585,7 +585,7 @@
                             <div class="service-slider2__slider swiper-slide">
                                 <div class="page-title page-title__service-slider2">Выбрать цвет тротуарной плитки</div>
                                 <div class="service-slider2__parts-wrapper">
-                                    <div class="service-slider2__slide-part">
+                                    <div class="service-slider2__slide-part" data-project="6">
                                         <div class="service-slider2__img-wrapper">
                                             <a href="#">
                                                 <img src="img/service-slider-img.png" alt="" class="service-slider2__img">
@@ -597,7 +597,7 @@
                                             <i class="service-block__units"> ₽/м²</i>
                                         </div>
                                     </div>
-                                    <div class="service-slider2__slide-part">
+                                    <div class="service-slider2__slide-part" data-project="7">
                                         <div class="service-slider2__img-wrapper">
                                             <a href="#">
                                                 <img src="img/service-slider-img2.png" alt="" class="service-slider2__img">
@@ -609,7 +609,7 @@
                                             <i class="service-block__units"> ₽/м²</i>
                                         </div>
                                     </div>
-                                    <div class="service-slider2__slide-part">
+                                    <div class="service-slider2__slide-part" data-project="8">
                                         <div class="service-slider2__img-wrapper">
                                             <a href="#">
                                                 <img src="img/service-slider-img3.png" alt="" class="service-slider2__img">
@@ -990,51 +990,9 @@
 <script src="js/inputmask.js"></script>
 <script src="js/scripts.js"></script>
 
-<!-- Initialize Swiper -->
 <script>
-    var serviceSwiper = new Swiper('.service-slider__container', {
-        pagination: '.service-slider__pagination',
-        paginationClickable: true,
-        bulletActiveClass: 'service-slider__pagination-link_active',
-        bulletClass: 'service-slider__pagination-link',
-        slidesPerView: 1,
-        spaceBetween: 0,
-        // Responsive breakpoints
-        breakpoints: {
-            // when window width is <= 768px
-            767: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-                pagination: '.service-slider__pagination-bullets',
-                bulletClass: 'service-slider__pagination-bullet',
-                bulletActiveClass: 'service-slider__pagination-bullet_active',
-                paginationBulletRender: function (swiper, index, className) {
-                    return '<div class="' + className + '"></div>';
-                }
-            },
-            // when window width is <= 991px
-            991: {
-                slidesPerView: 3,
-                spaceBetween: 6
-            }},
-        bulletNames: ['Укладка клинкерной брусчатки', 'Мощение камнем', 'Мощение тратуарной плиткой'],
-        paginationBulletRender: function (swiper, index, className) {
-            return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
-        }
-    });
 
-    var serviceSwiper2 = new Swiper('.service-slider2__container', {
-        pagination: '.service-slider2__pagination',
-        paginationClickable: true,
-        bulletActiveClass: 'service-slider__pagination-link_active',
-        bulletClass: 'service-slider__pagination-link',
-        slidesPerView: 1,
-        spaceBetween: 40,
-        bulletNames: ['Укладка клинкерной брусчатки', 'Мощение камнем', 'Мощение тратуарной плиткой'],
-        paginationBulletRender: function (swiper, index, className) {
-            return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
-        }
-    });
+
 </script>
 </body>
 </html>
