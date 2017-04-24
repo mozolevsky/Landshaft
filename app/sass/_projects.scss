@@ -21,7 +21,8 @@
   margin-left: 6px;
   padding: 15px;
   color: $bg_dark;
-  height: calc(100% - 50px);
+  height: auto;
+  margin-bottom: 40px;
 }
 
 .projects__item-desc_portfolio {
@@ -235,6 +236,7 @@
     background-color: transparent;
     padding-top: 15px;
     padding-bottom: 15px;
+    margin-bottom: 0;
   }
 
   .projects__desc-item {

@@ -19,9 +19,9 @@
 }
 
 .projects-row__item-img {
-  width: 100%;
+/*  width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden;*/
 }
 
 .projects-row__item-img img {
@@ -38,7 +38,6 @@
   flex-grow: 1;
   padding: 15px 0;
   color: $bg_dark;
-  height: calc(100% - 50px);
 }
 
 
