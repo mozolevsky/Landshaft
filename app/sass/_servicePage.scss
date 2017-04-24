@@ -4,7 +4,6 @@
 }
 
 .service-slider__container {
-  margin-bottom: 60px;
   padding-top: 30px;
   margin-top: -55px;
 }
@@ -95,7 +94,7 @@
 }
 
 .service-block__price {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 23px;
   display: flex;
   min-width: 125px;
@@ -112,7 +111,7 @@
 }
 
 .service-block__units_min {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
 }
 
@@ -146,22 +145,35 @@
   margin-top: 29px;
 }
 
-.service__order-btn {
+.service__order-btn.popup__order-tel {
   @include roboto(400, 20px, $white, 20px);
   padding: 18px 12px;
   background: $green_medium;
   border: none;
   border-radius: 5px;
   width: 49%;
+  border: 1px solid transparent;
 }
 
-.service__discount-btn {
+.service__discount-btn.popup__order-tel {
   @include roboto(400, 20px, $green_medium, 20px);
   padding: 16px 10px;
   background: $white;
   border: 1px solid $green_medium;
   border-radius: 5px;
   width: 49%;
+}
+
+.service__order-btn.popup__order-tel:hover {
+  background-color: transparent;
+  color: $green_medium;
+  border: 1px solid $green_medium;
+}
+
+.service__discount-btn.popup__order-tel:hover {
+  background-color: $green_medium;
+  color: $white;
+  border-color: $green_medium;
 }
 
 .service-slider__common-prices {
@@ -189,7 +201,6 @@
   flex-direction: row;
   margin-top: 20px;
   justify-content: space-between;
-  flex-basis: 100%;
 }
 
 .ext-money__item {
@@ -260,7 +271,12 @@ $ext-money-icons: (
   display: flex;
   justify-content: space-between;
   flex-basis: 60%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /*border-bottom: 1px solid rgba(0, 0, 0, 0.2);*/
+}
+
+.service-slider2__pagination .service-slider__pagination-link {
+  width: 33.4%;
+  text-align: center;
 }
 
 .page-title__service-slider2 {
@@ -450,21 +466,26 @@ $ext-money-icons: (
   }
 
  .service-block__price {
-   font-size: 19px;
+   font-size: 18px;
  }
 
   .service-slider__buttons-wrapper {
     flex-wrap: wrap;
   }
 
-  .service__order-btn,
-  .service__discount-btn {
+  .service__order-btn.popup__order-tel,
+  .service__discount-btn.popup__order-tel {
     width: 100%;
   }
 
   .service__order-btn {
     margin-bottom: 10px;
   }
+
+  .service__order-btn.popup__order-tel {
+    margin-bottom: 10px;
+  }
+
 
   .service__call-back-1 {
     display: block;
@@ -487,7 +508,6 @@ $ext-money-icons: (
     align-items: flex-start;
     margin-right: 0;
     margin-bottom: 15px;
-    flex-basis: 30%;
   }
 
   .ext-money__img-wrapper {

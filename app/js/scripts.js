@@ -17,6 +17,7 @@ var projectsSwiper = new Swiper('.projectsSlider', {
     keyboardControl: true
 });
 
+
 var clientsSwiper = new Swiper('.clients-slider', {
     pagination: '.clients__pagination',
     paginationClickable: true,
@@ -83,6 +84,76 @@ var servicesAdvSwiper = new Swiper('.advantages_slider', {
         }
     }
 });
+
+var serviceSwiper = new Swiper('.service-slider__container', {
+    pagination: '.service-slider__pagination',
+    paginationClickable: true,
+    bulletActiveClass: 'service-slider__pagination-link_active',
+    bulletClass: 'service-slider__pagination-link',
+    slidesPerView: 1,
+    spaceBetween: 0,
+    // Responsive breakpoints
+    breakpoints: {
+        // when window width is <= 768px
+        767: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            pagination: '.service-slider__pagination-bullets',
+            bulletClass: 'service-slider__pagination-bullet',
+            bulletActiveClass: 'service-slider__pagination-bullet_active',
+            paginationBulletRender: function (swiper, index, className) {
+                return '<div class="' + className + '"></div>';
+            }
+        },
+        // when window width is <= 991px
+        991: {
+            slidesPerView: 3,
+            spaceBetween: 6
+        }},
+    bulletNames: ['Укладка клинкерной брусчатки', 'Мощение камнем', 'Мощение тратуарной плиткой'],
+    paginationBulletRender: function (swiper, index, className) {
+        return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
+    }
+});
+
+var serviceSwiper2 = new Swiper('.service-slider2__container', {
+    pagination: '.service-slider2__pagination',
+    paginationClickable: true,
+    bulletActiveClass: 'service-slider__pagination-link_active',
+    bulletClass: 'service-slider__pagination-link',
+    slidesPerView: 1,
+    spaceBetween: 40,
+    bulletNames: ['Укладка клинкерной брусчатки', 'Мощение камнем', 'Мощение тратуарной плиткой'],
+    paginationBulletRender: function (swiper, index, className) {
+        return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
+    }
+});
+
+/* If we click on the block in slider with colors then we go to relevant project in projects slider */
++(function() {
+    var chooseColorBlocks = document.querySelectorAll('.service-slider2__slide-part');
+    var projectsBlock = document.querySelector('.projects');
+
+    if (chooseColorBlocks && projectsBlock) {
+        [].forEach.call(chooseColorBlocks, function(currentBlock){
+            currentBlock.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                if (this.hasAttribute('data-project')) {
+                    var slideIndex = this.getAttribute('data-project');
+
+                    var projectsBlockYCoord = projectsBlock.getBoundingClientRect().top;
+
+                    if (projectsSwiper.slideTo(slideIndex, 700)) {
+                        window.scrollTo(0, projectsBlockYCoord + window.pageYOffset);
+                        projectsSwiper.slideTo(slideIndex, 700);
+                    }
+                }
+            });
+        });
+    }
+
+})();
 
 
 var menuButton = document.querySelector('.about-us__nav-open');

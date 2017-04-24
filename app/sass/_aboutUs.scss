@@ -70,6 +70,10 @@
   transition: all 0.2s ease-in-out;
 }
 
+.about-us__nav-link a {
+  color: $white;
+}
+
 .about-us__nav-item:hover .about-us__inner-menu {
   display: block;
 }
