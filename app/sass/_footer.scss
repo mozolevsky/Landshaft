@@ -13,6 +13,7 @@
 .footer__bottom-wrap {
   display: flex;
   justify-content: space-between;
+  height: auto;
 }
 
 .footer__name {
@@ -157,6 +158,14 @@
   .footer__bottom-wrap {
     flex-direction: column-reverse;
     align-items: flex-start;
+  }
+
+  .footer__name {
+    flex-basis: auto;
+  }
+
+  .footer__contacts{
+    flex-basis: auto;
   }
 
   .footer__desc {
