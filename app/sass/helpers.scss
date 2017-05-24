@@ -16,6 +16,8 @@ $grad_green_dark2: #459c2b;
 $grad_green_light1: #82c546;
 $grad_green_light2: #64b12b;
 
+$green_sub-title: #6cb443;
+
 $grad_grey1: #5b5b5d;
 $grad_grey2: #3e3e3f;
 
@@ -38,6 +40,11 @@ $red: #ff0000;
   font-size: $size;
   color: $color;
   line-height: $lHeight;
+}
+
+@mixin fontSH($size: 16px, $height: 24px) {
+  font-size: $size;
+  line-height: $height;
 }
 
 @mixin trans($duration: 0.3s) {

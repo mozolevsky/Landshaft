@@ -110,7 +110,9 @@ var serviceSwiper = new Swiper('.service-slider__container', {
             slidesPerView: 3,
             spaceBetween: 6
         }},
-    bulletNames: ['Укладка клинкерной брусчатки', 'Мощение камнем', 'Мощение тратуарной плиткой'],
+    bulletNames: function() {
+        return bulletNamesGlobal ? bulletNamesGlobal : 'Значение по умолчанию';
+    },
     paginationBulletRender: function (swiper, index, className) {
         return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
     }
@@ -123,7 +125,9 @@ var serviceSwiper2 = new Swiper('.service-slider2__container', {
     bulletClass: 'service-slider__pagination-link',
     slidesPerView: 1,
     spaceBetween: 40,
-    bulletNames: ['Укладка клинкерной брусчатки', 'Мощение камнем', 'Мощение тратуарной плиткой'],
+    bulletNames: function() {
+        return bulletNamesGlobal2 ? bulletNamesGlobal2 : 'Значение по умолчанию';
+    },
     paginationBulletRender: function (swiper, index, className) {
         return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
     }
