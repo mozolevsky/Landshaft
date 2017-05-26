@@ -85,6 +85,22 @@ var servicesAdvSwiper = new Swiper('.advantages_slider', {
     }
 });
 
+var bulletNamesGlobal = bulletNamesGlobal ? bulletNamesGlobal : ['Нет названий табов'];
+var bulletNamesGlobal2 = bulletNamesGlobal2 ? bulletNamesGlobal2 : ['Нет названий табов'];
+
+var complexSwiper = new Swiper('.complex-slider__container', {
+    pagination: '.complex-slider__pagination',
+    paginationClickable: true,
+    bulletActiveClass: 'complex-slider__pagination-link_active',
+    bulletClass: 'complex-slider__pagination-link',
+    slidesPerView: 1,
+    spaceBetween: 0,
+    bulletNames: bulletNamesGlobal,
+    paginationBulletRender: function (swiper, index, className) {
+        return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
+    }
+});
+
 var serviceSwiper = new Swiper('.service-slider__container', {
     pagination: '.service-slider__pagination',
     paginationClickable: true,
@@ -110,9 +126,7 @@ var serviceSwiper = new Swiper('.service-slider__container', {
             slidesPerView: 3,
             spaceBetween: 6
         }},
-    bulletNames: function() {
-        return bulletNamesGlobal ? bulletNamesGlobal : 'Значение по умолчанию';
-    },
+    bulletNames: bulletNamesGlobal,
     paginationBulletRender: function (swiper, index, className) {
         return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
     }
@@ -125,9 +139,7 @@ var serviceSwiper2 = new Swiper('.service-slider2__container', {
     bulletClass: 'service-slider__pagination-link',
     slidesPerView: 1,
     spaceBetween: 40,
-    bulletNames: function() {
-        return bulletNamesGlobal2 ? bulletNamesGlobal2 : 'Значение по умолчанию';
-    },
+    bulletNames: bulletNamesGlobal2,
     paginationBulletRender: function (swiper, index, className) {
         return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
     }

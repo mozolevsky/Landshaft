@@ -8,6 +8,11 @@
   margin-top: -55px;
 }
 
+.service-slider__container_complex {
+  padding-top: 0;
+  margin-top: 0;
+}
+
 .service-slider__pagination-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -69,12 +74,13 @@
   font-size: 22px;
   line-height: 32px;
   text-transform: uppercase;
+  letter-spacing: 0.55px;
 }
 
 .service-block {
   display: flex;
   justify-content: space-between;
-  padding-top: 17px;
+  padding-top: 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
