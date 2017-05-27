@@ -3691,9 +3691,64 @@
   color: #ffffff;
   background: #43982b; }
 
+.complex-features {
+  margin-bottom: 10px;
+  margin-right: 13px;
+  padding-top: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 22px;
+  background: #efefef;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.complex-features__title {
+  text-transform: uppercase;
+  color: #43982b; }
+
+.plants {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.plants__plant-title {
+  display: none; }
+
+.plans__plant {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: 145px;
+  height: 150px;
+  -webkit-border-radius: 11px;
+          border-radius: 11px; }
+
+.plants__img {
+  width: 100%;
+  height: auto; }
+
+@media (max-width: 1199px) {
+  .plans__plant {
+    width: 117px;
+    height: auto; } }
+
 @media (max-width: 992px) {
   .complex-slider_complex {
     padding-top: 4px; }
+  .complex-slider__pagination-wrapper {
+    margin-bottom: 20px; }
   .complex-desc {
     font-size: 16px;
     line-height: 24px;
@@ -3705,11 +3760,22 @@
   .complex-slider__pagination {
     width: 100%; }
   .attention__title {
-    margin-right: 70px; } }
+    margin-right: 70px; }
+  .complex-features {
+    margin-right: 0; }
+  .complex-features__desc {
+    margin-bottom: 0; }
+  .plans__plant {
+    width: 19.3%;
+    height: auto; } }
 
 @media (max-width: 768px) {
   .complex-slider_complex {
     padding-top: 0; }
+  .complex-slider__pagination-link {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center; }
   .complex-desc_big {
     font-size: 16px;
     line-height: 22px;
@@ -3769,6 +3835,8 @@
   .attention__title {
     margin-right: 0; }
   .attention__question {
+    display: none; }
+  .plants {
     display: none; } }
 
 @font-face {
