@@ -159,6 +159,7 @@
   border-radius: 5px;
   width: 49%;
   border: 1px solid transparent;
+  @include trans();
 }
 
 .service__discount-btn.popup__order-tel {
@@ -168,6 +169,7 @@
   border: 1px solid $green_medium;
   border-radius: 5px;
   width: 49%;
+  @include trans();
 }
 
 .service__order-btn.popup__order-tel:hover {
@@ -263,7 +265,7 @@ $ext-money-icons: (
 .service-slider2 {
   padding-top: 36px;
   padding-bottom: 60px;
-  background: $grey;
+  background: $gray;
   margin-bottom: 30px;
 }
 

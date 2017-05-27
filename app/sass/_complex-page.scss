@@ -4,7 +4,7 @@
 }
 
 .complex-slider__container {
-
+  margin-bottom: 95px;
 }
 
 .complex-slider__pagination-wrapper {
@@ -122,10 +122,10 @@
 }
 
 .complex-block__amount {
-  background: $grey;
+  background: $gray;
   width: 50%;
   padding-left: 15%;
-  background: $grey;
+  background: $gray;
   height: 100%;
   display: flex;
   justify-content: flex-start;
@@ -134,8 +134,8 @@
 }
 
 .complex-block__amount_round-top-border {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: $border_radius;
+  border-top-right-radius: $border_radius;
 }
 
 .complex-block__amount_title {
@@ -198,6 +198,50 @@
   text-transform: uppercase;
 }
 
+.attention {
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-left: 3.5%;
+  padding-right: 3.5%;
+  padding-bottom: 25px;
+  background: $gray;
+  border-radius: $border_radius;
+
+  display: flex;
+}
+
+.attention__title {
+  margin-right: 30px;
+  @include fontSH(14px, 30px);
+  text-transform: uppercase;
+  color: $red;
+  letter-spacing: 0.7px;
+}
+
+.attention__desc {
+  @include fontSH(16px, 30px);
+  margin-bottom: 0;
+}
+
+.attention__btn {
+  padding-left: 12px;
+  padding-right: 12px;
+  color: $green_medium;
+  border: 1px solid $green_medium;
+  border-radius: $border_radius;
+  box-sizing: border-box;
+  background: #fbfaf9;
+  @include trans(0.3s);
+}
+
+.attention__btn:hover {
+  cursor: pointer;
+  color: $white;
+  background: $green_medium;
+}
+
+
+
 @media (max-width: 992px) {
   .complex-slider_complex {
     padding-top: 4px;
@@ -216,7 +260,13 @@
   .complex-slider__pagination {
     width: 100%;
   }
+
+  .attention__title {
+    margin-right: 70px;
+  }
 }
+
+
 
 
 @media (max-width: 768px) {
@@ -267,8 +317,12 @@
     padding-right: 5px;
   }
 
+  .complex-total {
+    margin-bottom: 30px;
+  }
+
   .complex-total__sum-wrapper {
-    width: 50%;
+    width: 60%;
   }
 
   .complex-total__title {
@@ -281,5 +335,21 @@
 
   .complex-total__sum-current {
     font-size: 18px;
+  }
+
+  .attention {
+    margin-top: 20px;
+    padding-top: 15px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .attention__title {
+    margin-right: 0;
+  }
+
+  .attention__question {
+    display: none;
   }
 }
