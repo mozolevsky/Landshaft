@@ -66,6 +66,28 @@
   background-size: 125px;
 }
 
+.advantages__item_9 {
+  background-image: url("../img/serv_adv9.png");
+  background-position: center 20px;
+  background-size: 100px;
+}
+
+.advantages__item_10 {
+  background-image: url("../img/serv_adv10.png");
+  background-position: center 20px;
+  background-size: 125px;
+}
+
+.advantages__item_11 {
+  background-image: url("../img/serv_adv11.png");
+  background-position: center 20px;
+  background-size: 125px;
+}
+
+.advantages__item_12 {
+  display: block;
+}
+
 .advantages__item-title {
   font-size: 14px;
   line-height: 20px;
@@ -79,6 +101,12 @@
   line-height: 22px;
 }
 
+.advantages__item-text_title {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .advantages__pagination {
   display: none;
 }
@@ -87,14 +115,51 @@
   width: 26% !important;
 }
 
+/*===== ORDER =====*/
+.advantages_order {
+  background-color: transparent;
+  margin-top: -20px;
+}
+
+.advantages__item-text _order {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.advantages__item-order {
+  padding-top: 100px;
+  position: relative;
+}
+
+.advantages__item_order1 {
+  background-image: url("../img/order_step1.png");
+}
+
+.advantages__item_order2 {
+  background-image: url("../img/order_step2.png");
+}
+
+.advantages__item_order3 {
+  background-image: url("../img/order_step3.png");
+}
+
+.advantages__item_order1::after,
+.advantages__item_order2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 20%;
+  right: -12%;
+  width: 65px;
+  height: 20px;
+  background-image: url("../img/order_arrow.png");
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 992px) {
   .advantages__title {
     margin-bottom: 40px;
     line-height: 36px;
-  }
-
-  .advantages__item_4 {
-    display: none;
   }
 
   .advantages__item-text {
@@ -104,31 +169,6 @@
 
   .advantages_slider .swiper-slide {
     width: 35% !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .advantages {
-    margin-top: 0;
-    margin-bottom: 20px;
-    background-color: white;
-  }
-
-  .advantages__title {
-    margin-bottom: 0;
-    margin-top: 0;
-    font-size: 26px;
-    line-height: 32px;
-    text-transform: none;
-  }
-
-  .advantages__item {
-    padding-top: 140px;
-    font-size: 16px;
-  }
-
-  .advantages__item_4 {
-    display: block;
   }
 
   .advantages__pagination {
@@ -161,11 +201,98 @@
     background: transparent;
   }
 
+  /*===== ORDER =====*/
+  .advantages-order_slider {
+    padding-bottom: 10px;
+  }
+
+  .advantages_order {
+    margin-bottom: 20px;
+  }
+
+  .advantages__item_order1::after,
+  .advantages__item_order2::after {
+    right: -20%;
+  }
+
+  .advantages__pagination_order.swiper-pagination-bullets {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .advantages {
+    margin-top: 0;
+    margin-bottom: 20px;
+    background-color: white;
+  }
+
+  .advantages_complex {
+    padding: 20px 0;
+    background-color: $gray;
+  }
+
+  .advantages__title {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 26px;
+    line-height: 32px;
+    text-transform: none;
+  }
+
+  .advantages__item-text_title {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 15px;
+  }
+
+  .advantages__item {
+    padding-top: 140px;
+    font-size: 16px;
+  }
+
+  .advantages__item_4 {
+    display: block;
+  }
+
   .advantages_slider .swiper-slide {
     width: 100% !important;
   }
 
   .advantages_slider .swiper-wrapper {
     padding-bottom: 20px;
+  }
+
+  /*===== ORDER =====*/
+  .advantages__item-text_order {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .advantages__pagination_order.swiper-pagination-bullets {
+    display: block;
+  }
+
+  .advantages__item-order {
+    background-position: center 25px;
+  }
+
+  .advantages__item_order1::after,
+  .advantages__item_order2::after {
+    right: 15%;
+    top: 32%;
+  }
+}
+
+@media (max-width: 480px) {
+  /*===== ORDER =====*/
+  .swiper-container.advantages-order_slider.swiper-container-horizontal {
+    padding-bottom: 10px;
+  }
+
+  .advantages__item_order1::after,
+  .advantages__item_order2::after {
+    right: 0;
+    top: 27%;
   }
 }
