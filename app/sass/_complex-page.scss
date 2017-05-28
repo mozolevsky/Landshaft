@@ -267,6 +267,22 @@
 
 .plants__plant-title {
   display: none;
+  position: absolute;
+  padding: 5px;
+  box-sizing: border-box;
+  z-index: 2;
+  background: rgba(90, 161, 43, 0.85);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border-radius: inherit;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: white;
+  line-height: 20px;
+  letter-spacing: 0.22px;
+  text-align: center;
+  opacity: 0;
 }
 
 .plans__plant {
@@ -275,11 +291,29 @@
   width: 145px;
   height: 150px;
   border-radius: 11px;
+  position: relative;
 }
 
 .plants__img {
   width: 100%;
   height: auto;
+}
+
+.plans__plant:hover {
+  cursor: pointer;
+}
+
+@keyframes opacity {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.plans__plant:hover .plants__plant-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: opacity 0.3s ease;
+  opacity: 1;
 }
 
 
@@ -293,7 +327,7 @@
 
 
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .complex-slider_complex {
     padding-top: 4px;
   }
@@ -326,6 +360,10 @@
 
   .complex-features__desc {
     margin-bottom: 0;
+  }
+
+  .plants {
+    margin-bottom: 25px;
   }
 
   .plans__plant {
