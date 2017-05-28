@@ -7,7 +7,7 @@ $green_text-medium: #78be40;
 $green_text-dark: #57a638;
 $bg_dark: #242425;
 $white: #ffffff;
-$grey: #efefef;
+$gray: #efefef;
 $light-grey: #f5f5f5;
 $dark-grey: #39393b;
 
@@ -15,6 +15,8 @@ $grad_green_dark1: #63b446;
 $grad_green_dark2: #459c2b;
 $grad_green_light1: #82c546;
 $grad_green_light2: #64b12b;
+
+$green_sub-title: #6cb443;
 
 $grad_grey1: #5b5b5d;
 $grad_grey2: #3e3e3f;
@@ -32,12 +34,20 @@ $slider_grey2: #4a4b4c;
 
 $red: #ff0000;
 
+$border_radius: 5px;
+
+
 @mixin roboto($weight: 400, $size: 16px, $color: rgba(255, 255, 255, 1), $lHeight: 30px) {
   font-family: 'Roboto', 'Arial', sans-serif;
   font-weight: $weight;
   font-size: $size;
   color: $color;
   line-height: $lHeight;
+}
+
+@mixin fontSH($size: 16px, $height: 24px) {
+  font-size: $size;
+  line-height: $height;
 }
 
 @mixin trans($duration: 0.3s) {
@@ -50,3 +60,4 @@ $red: #ff0000;
   right: $x;
   transform: translate(-50%, -50%);
 }
+

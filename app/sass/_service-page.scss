@@ -8,6 +8,11 @@
   margin-top: -55px;
 }
 
+.service-slider__container_complex {
+  padding-top: 0;
+  margin-top: 0;
+}
+
 .service-slider__pagination-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -69,12 +74,13 @@
   font-size: 22px;
   line-height: 32px;
   text-transform: uppercase;
+  letter-spacing: 0.55px;
 }
 
 .service-block {
   display: flex;
   justify-content: space-between;
-  padding-top: 17px;
+  padding-top: 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -153,6 +159,7 @@
   border-radius: 5px;
   width: 49%;
   border: 1px solid transparent;
+  @include trans();
 }
 
 .service__discount-btn.popup__order-tel {
@@ -162,6 +169,7 @@
   border: 1px solid $green_medium;
   border-radius: 5px;
   width: 49%;
+  @include trans();
 }
 
 .service__order-btn.popup__order-tel:hover {
@@ -257,7 +265,7 @@ $ext-money-icons: (
 .service-slider2 {
   padding-top: 36px;
   padding-bottom: 60px;
-  background: $grey;
+  background: $gray;
   margin-bottom: 30px;
 }
 

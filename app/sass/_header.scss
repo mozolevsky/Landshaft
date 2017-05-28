@@ -51,7 +51,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: $grey;
+  background-color: $gray;
 }
 
 .header__nav-item:first-of-type::before {
@@ -139,7 +139,7 @@
     flex-direction: row-reverse;
     justify-content: space-around;
     padding: 3px 0;
-    background-color: $grey;
+    background-color: $gray;
     border-bottom: 1px solid #dbdbdb;
   }
 
