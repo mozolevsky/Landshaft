@@ -76,7 +76,7 @@ var servicesAdvSwiper = new Swiper('.advantages_slider', {
         },
         // when window width is <= 768px
         1200: {
-            slidesPerView: 4,
+            slidesPerView: 3,
         },
         // when window width is <= 768px
         1920: {
@@ -280,6 +280,40 @@ $(document).ready(function(){
 });
 
 
+/* js module complex page, plants block auto-height */
 
++(function() {
+    function makeHeight() {
+        var range = function () {
+            return window.innerWidth > 768 && window.innerWidth <= 992;
+        };
 
+        if (range()) {
+            var currentPlantsBlock = document.querySelector('.complex-slider__slide.swiper-slide-active') || '';
+            var plantsBlock = currentPlantsBlock.querySelector('.plants');
+
+            if (currentPlantsBlock) {
+                var plantsBlockHeight = 0;
+
+                var plantsAmount = plantsBlock.childElementCount;
+                if (plantsAmount !==0 && plantsAmount <= 5) {
+                    plantsBlockHeight = 145;
+                } else if (plantsAmount <= 10) {
+                    plantsBlockHeight = 290;
+                } else {
+                    plantsBlockHeight = 350;
+                }
+
+                plantsBlock.style.cssText = 'height:' + plantsBlockHeight + 'px; overflow-y: auto;';
+                console.log('1');
+            }
+        }
+    }
+    makeHeight();
+
+    var complexPaginBlock = document.querySelector('.complex-slider__pagination');
+    complexPaginBlock.addEventListener('click', function(e) {
+        makeHeight();
+    });
+})();
 
