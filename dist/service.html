@@ -1115,53 +1115,13 @@
 <script src="js/keyCodeHandler.js"></script>
 <script src="js/js_inputmask.js"></script>
 <script src="js/inputmask.js"></script>
+
+<script>
+    var bulletNamesGlobal = ['Укладка клинкерной брусчатки', 'Мощение камнем', 'Мощение тратуарной плиткой'];
+    var bulletNamesGlobal2 = ['Укладка клинкерной брусчатки', 'Мощение камнем', 'Мощение тратуарной плиткой'];
+</script>
+
 <script src="js/scripts.js"></script>
 
-<!-- Initialize Swiper -->
-<script>
-    var serviceSwiper = new Swiper('.service-slider__container', {
-        pagination: '.service-slider__pagination',
-        paginationClickable: true,
-        bulletActiveClass: 'service-slider__pagination-link_active',
-        bulletClass: 'service-slider__pagination-link',
-        slidesPerView: 1,
-        spaceBetween: 0,
-        // Responsive breakpoints
-        breakpoints: {
-            // when window width is <= 768px
-            767: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-                pagination: '.service-slider__pagination-bullets',
-                bulletClass: 'service-slider__pagination-bullet',
-                bulletActiveClass: 'service-slider__pagination-bullet_active',
-                paginationBulletRender: function (swiper, index, className) {
-                    return '<div class="' + className + '"></div>';
-                }
-            },
-            // when window width is <= 991px
-            991: {
-                slidesPerView: 3,
-                spaceBetween: 6
-            }},
-        bulletNames: ['Укладка клинкерной брусчатки', 'Мощение камнем', 'Мощение тратуарной плиткой'],
-        paginationBulletRender: function (swiper, index, className) {
-            return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
-        }
-    });
-
-    var serviceSwiper2 = new Swiper('.service-slider2__container', {
-        pagination: '.service-slider2__pagination',
-        paginationClickable: true,
-        bulletActiveClass: 'service-slider__pagination-link_active',
-        bulletClass: 'service-slider__pagination-link',
-        slidesPerView: 1,
-        spaceBetween: 40,
-        bulletNames: ['Укладка клинкерной брусчатки', 'Мощение камнем', 'Мощение тратуарной плиткой'],
-        paginationBulletRender: function (swiper, index, className) {
-            return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
-        }
-    });
-</script>
 </body>
 </html>

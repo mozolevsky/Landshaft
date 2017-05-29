@@ -1,10 +1,12 @@
-.complex-slider {
-  padding-top: 38px;
+@import 'helpers';
+
+.service-slider_complex {
+  padding-top: 24px;
   @include roboto(400, 16px, $bg_dark, 16px);
 }
 
 .complex-slider__container {
-  margin-bottom: 95px;
+  margin-bottom: 80px;
 }
 
 .complex-slider__pagination-wrapper {
@@ -34,7 +36,8 @@
 }
 
 .complex-slider__pagination-link_active {
-  color: $bg_dark;
+  color: $bg_dark !important;
+  text-decoration: none !important;
 }
 
 .complex-slider__pagination-link:hover {

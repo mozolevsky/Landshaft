@@ -76,7 +76,7 @@ var servicesAdvSwiper = new Swiper('.advantages_slider', {
         },
         // when window width is <= 768px
         1200: {
-            slidesPerView: 4,
+            slidesPerView: 3,
         },
         // when window width is <= 768px
         1920: {
@@ -84,6 +84,10 @@ var servicesAdvSwiper = new Swiper('.advantages_slider', {
         }
     }
 });
+
+var bulletNamesGlobal = bulletNamesGlobal ? bulletNamesGlobal : ['Нет названий табов'];
+var bulletNamesGlobal2 = bulletNamesGlobal2 ? bulletNamesGlobal2 : ['Нет названий табов'];
+
 
 var serviceSwiper = new Swiper('.service-slider__container', {
     pagination: '.service-slider__pagination',
@@ -110,7 +114,7 @@ var serviceSwiper = new Swiper('.service-slider__container', {
             slidesPerView: 3,
             spaceBetween: 6
         }},
-    bulletNames: ['Укладка клинкерной брусчатки', 'Мощение камнем', 'Мощение тратуарной плиткой'],
+    bulletNames: bulletNamesGlobal,
     paginationBulletRender: function (swiper, index, className) {
         return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
     }
@@ -123,7 +127,7 @@ var serviceSwiper2 = new Swiper('.service-slider2__container', {
     bulletClass: 'service-slider__pagination-link',
     slidesPerView: 1,
     spaceBetween: 40,
-    bulletNames: ['Укладка клинкерной брусчатки', 'Мощение камнем', 'Мощение тратуарной плиткой'],
+    bulletNames: bulletNamesGlobal2,
     paginationBulletRender: function (swiper, index, className) {
         return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
     }
@@ -264,6 +268,103 @@ $(document).ready(function(){
 });
 
 
+var complexSwiper = new Swiper('.complex-slider__container', {
+    pagination: '.complex-slider__pagination',
+    paginationClickable: true,
+    bulletActiveClass: 'complex-slider__pagination-link_active',
+    bulletClass: 'complex-slider__pagination-link',
+    slidesPerView: 1,
+    spaceBetween: 0,
+    bulletNames: bulletNamesGlobal,
+    paginationBulletRender: function (swiper, index, className) {
+        return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
+    },
+    noSwipingClass: 'complex-slider__container',
+    breakpoints: {
+        // when window width is <= 320px
+        767: {
+            noSwiping: false
+        }
+    }
+});
 
 
+/* js module complex page, plants block auto-height */
 
++(function() {
+    function makeHeight() {
+        var range = function () {
+            return window.innerWidth > 768 && window.innerWidth <= 992;
+        };
+
+        if (range()) {
+            var currentPlantsBlock = document.querySelector('.complex-slider__slide.swiper-slide-active') || '';
+            var plantsBlock = currentPlantsBlock.querySelector('.plants');
+
+            if (currentPlantsBlock) {
+                var plantsBlockHeight = 0;
+
+                var plantsAmount = plantsBlock.childElementCount;
+                if (plantsAmount !==0 && plantsAmount <= 5) {
+                    plantsBlockHeight = 145;
+                } else if (plantsAmount <= 10) {
+                    plantsBlockHeight = 290;
+                } else {
+                    plantsBlockHeight = 350;
+                }
+
+                plantsBlock.style.cssText = 'height:' + plantsBlockHeight + 'px; overflow-y: auto;';
+                console.log('1');
+            }
+        }
+    }
+    makeHeight();
+
+    var complexPaginBlock = document.querySelector('.complex-slider__pagination');
+    complexPaginBlock.addEventListener('click', function(e) {
+        makeHeight();
+    });
+})();
+
+/* auto height for complex slider */
++(function() {
+    var sliderContainer = document.querySelector('.complex-slider__container');
+    var complexPaginBlock = document.querySelector('.complex-slider__pagination');
+
+    $('.complex-slider__container').css({height: $('.complex-slider__container').find('.swiper-slide-active').height() + 80});
+
+    complexPaginBlock.addEventListener('click', function(){
+        //Unset height
+        $('.complex-slider__container').css({height:''});
+        //Calc Height
+        $('.complex-slider__container').css({height: $('.complex-slider__container').find('.swiper-slide-active').height() + 80});
+    });
+})();
+
+var servicesAdvOrderSwiper = new Swiper('.advantages-order_slider', {
+    pagination: '.advantages__pagination',
+    paginationClickable: true,
+    keyboardControl: true,
+    breakpoints: {
+        // when window width is <= 320px
+        320: {
+            slidesPerView: 1,
+        },
+        // when window width is <= 480px
+        480: {
+            slidesPerView: 1,
+        },
+        // when window width is <= 768px
+        768: {
+            slidesPerView: 1,
+        },
+        // when window width is <= 768px
+        1200: {
+            slidesPerView: 3,
+        },
+        // when window width is <= 768px
+        1920: {
+            slidesPerView: 3,
+        }
+    }
+});

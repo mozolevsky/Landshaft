@@ -691,14 +691,14 @@
                     <div class="services-page_aside recomend__aside">
                         <h3 class="services-page_aside-title recomend__aside-title">Также советуем посмотреть</h3>
                         <ul class="services-page__list">
-                            <li class="services-page__list-item"><a href="#">Уличное освещение</a></li>
-                            <li class="services-page__list-item"><a href="#">Автополив</a></li>
-                            <li class="services-page__list-item"><a href="#">Дренажные системы</a></li>
-                            <li class="services-page__list-item"><a href="#">Подпорная стенка</a></li>
-                            <li class="services-page__list-item"><a href="#">Уличная печь/камин. Печи барбекю</a></li>
-                            <li class="services-page__list-item"><a href="#">Террасный декинг из ДПК</a></li>
-                            <li class="services-page__list-item"><a href="#">Декоративный пруд и водоём</a></li>
-                            <li class="services-page__list-item"><a href="#">Каскад, водопад, ручьи и фонтаны</a></li>
+                            <li class="services-page__list-item"><a href="#https://pro-landshaft.com/blagoustrojstvo/ulichnoe-osveshhenie.html">Уличное освещение</a></li>
+                            <li class="services-page__list-item"><a href="https://pro-landshaft.com/blagoustrojstvo/avtopoliv.html">Автополив</a></li>
+                            <li class="services-page__list-item"><a href="https://pro-landshaft.com/blagoustrojstvo/drenazhnyij-sistemyi.html">Дренажные системы</a></li>
+                            <li class="services-page__list-item"><a href="https://pro-landshaft.com/blagoustrojstvo/podpornaya-stenka.html">Подпорная стенка</a></li>
+                            <li class="services-page__list-item"><a href="https://pro-landshaft.com/blagoustrojstvo/ulichnaya-pech-kamin-barbekyu.html#">Уличная печь/камин. Печи барбекю</a></li>
+                            <li class="services-page__list-item"><a href="https://pro-landshaft.com/blagoustrojstvo/terrasnyij-deking-iz-dpk.html">Террасный декинг из ДПК</a></li>
+                            <li class="services-page__list-item"><a href="https://pro-landshaft.com/blagoustrojstvo/dekorativnyij-prud-i-vodoyom.html">Декоративный пруд и водоём</a></li>
+                            <li class="services-page__list-item"><a href="https://pro-landshaft.com/blagoustrojstvo/kaskad-vodopad-ruchi-i-fontanyi.html">Каскад, водопад, ручьи и фонтаны</a></li>
                         </ul>
                     </div>
                 </div>
@@ -817,53 +817,13 @@
 <script src="js/keyCodeHandler.js"></script>
 <script src="js/js_inputmask.js"></script>
 <script src="js/inputmask.js"></script>
+
+<script>
+    var bulletNamesGlobal = ['Эксклюзивный проект', 'Ландшафтный проект'];
+    var bulletNamesGlobal2 = ['Эксклюзивный проект', 'Ландшафтный проект'];
+</script>
+
 <script src="js/scripts.js"></script>
 
-<!-- Initialize Swiper -->
-<script>
-    var serviceSwiper = new Swiper('.service-slider__container', {
-        pagination: '.service-slider__pagination',
-        paginationClickable: true,
-        bulletActiveClass: 'service-slider__pagination-link_active',
-        bulletClass: 'service-slider__pagination-link',
-        slidesPerView: 1,
-        spaceBetween: 0,
-        // Responsive breakpoints
-        breakpoints: {
-            // when window width is <= 768px
-            767: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-                pagination: '.service-slider__pagination-bullets',
-                bulletClass: 'service-slider__pagination-bullet',
-                bulletActiveClass: 'service-slider__pagination-bullet_active',
-                paginationBulletRender: function (swiper, index, className) {
-                    return '<div class="' + className + '"></div>';
-                }
-            },
-            // when window width is <= 991px
-            991: {
-                slidesPerView: 3,
-                spaceBetween: 6
-            }},
-        bulletNames: ['Эскизный проект', 'Ландшафтный проект'],
-        paginationBulletRender: function (swiper, index, className) {
-            return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
-        }
-    });
-
-    var serviceSwiper2 = new Swiper('.service-slider2__container', {
-        pagination: '.service-slider2__pagination',
-        paginationClickable: true,
-        bulletActiveClass: 'service-slider__pagination-link_active',
-        bulletClass: 'service-slider__pagination-link',
-        slidesPerView: 1,
-        spaceBetween: 40,
-        bulletNames: ['Эскизный проект', 'Ландшафтный проект'],
-        paginationBulletRender: function (swiper, index, className) {
-            return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
-        }
-    });
-</script>
 </body>
 </html>

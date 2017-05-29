@@ -85,71 +85,8 @@ var servicesAdvSwiper = new Swiper('.advantages_slider', {
     }
 });
 
-var servicesAdvOrderSwiper = new Swiper('.advantages-order_slider', {
-    pagination: '.advantages__pagination',
-    paginationClickable: true,
-    keyboardControl: true,
-    breakpoints: {
-        // when window width is <= 320px
-        320: {
-            slidesPerView: 1,
-        },
-        // when window width is <= 480px
-        480: {
-            slidesPerView: 1,
-        },
-        // when window width is <= 768px
-        768: {
-            slidesPerView: 1,
-        },
-        // when window width is <= 768px
-        1200: {
-            slidesPerView: 3,
-        },
-        // when window width is <= 768px
-        1920: {
-            slidesPerView: 3,
-        }
-    }
-});
-
 var bulletNamesGlobal = bulletNamesGlobal ? bulletNamesGlobal : ['Нет названий табов'];
 var bulletNamesGlobal2 = bulletNamesGlobal2 ? bulletNamesGlobal2 : ['Нет названий табов'];
-
-var complexSwiper = new Swiper('.complex-slider__container', {
-    pagination: '.complex-slider__pagination',
-    paginationClickable: true,
-    bulletActiveClass: 'complex-slider__pagination-link_active',
-    bulletClass: 'complex-slider__pagination-link',
-    slidesPerView: 1,
-    spaceBetween: 0,
-    bulletNames: bulletNamesGlobal,
-    paginationBulletRender: function (swiper, index, className) {
-        return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
-    },
-    noSwipingClass: 'complex-slider__container',
-    breakpoints: {
-        // when window width is <= 320px
-        767: {
-            noSwiping: false
-        }
-    }
-});
-
-/* auto height for complex slider */
-+(function() {
-    var sliderContainer = document.querySelector('.complex-slider__container');
-    var complexPaginBlock = document.querySelector('.complex-slider__pagination');
-    complexPaginBlock.addEventListener('click', function(){
-        //Unset height
-        $('.complex-slider__container').css({height:''});
-        //Calc Height
-        $('.complex-slider__container').css({height: $('.complex-slider__container').find('.swiper-slide-active').height() + 95});
-    });
-})();
-
-
-
 
 
 var serviceSwiper = new Swiper('.service-slider__container', {
@@ -331,6 +268,27 @@ $(document).ready(function(){
 });
 
 
+var complexSwiper = new Swiper('.complex-slider__container', {
+    pagination: '.complex-slider__pagination',
+    paginationClickable: true,
+    bulletActiveClass: 'complex-slider__pagination-link_active',
+    bulletClass: 'complex-slider__pagination-link',
+    slidesPerView: 1,
+    spaceBetween: 0,
+    bulletNames: bulletNamesGlobal,
+    paginationBulletRender: function (swiper, index, className) {
+        return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
+    },
+    noSwipingClass: 'complex-slider__container',
+    breakpoints: {
+        // when window width is <= 320px
+        767: {
+            noSwiping: false
+        }
+    }
+});
+
+
 /* js module complex page, plants block auto-height */
 
 +(function() {
@@ -368,3 +326,45 @@ $(document).ready(function(){
     });
 })();
 
+/* auto height for complex slider */
++(function() {
+    var sliderContainer = document.querySelector('.complex-slider__container');
+    var complexPaginBlock = document.querySelector('.complex-slider__pagination');
+
+    $('.complex-slider__container').css({height: $('.complex-slider__container').find('.swiper-slide-active').height() + 80});
+
+    complexPaginBlock.addEventListener('click', function(){
+        //Unset height
+        $('.complex-slider__container').css({height:''});
+        //Calc Height
+        $('.complex-slider__container').css({height: $('.complex-slider__container').find('.swiper-slide-active').height() + 80});
+    });
+})();
+
+var servicesAdvOrderSwiper = new Swiper('.advantages-order_slider', {
+    pagination: '.advantages__pagination',
+    paginationClickable: true,
+    keyboardControl: true,
+    breakpoints: {
+        // when window width is <= 320px
+        320: {
+            slidesPerView: 1,
+        },
+        // when window width is <= 480px
+        480: {
+            slidesPerView: 1,
+        },
+        // when window width is <= 768px
+        768: {
+            slidesPerView: 1,
+        },
+        // when window width is <= 768px
+        1200: {
+            slidesPerView: 3,
+        },
+        // when window width is <= 768px
+        1920: {
+            slidesPerView: 3,
+        }
+    }
+});
