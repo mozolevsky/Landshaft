@@ -98,8 +98,31 @@ var complexSwiper = new Swiper('.complex-slider__container', {
     bulletNames: bulletNamesGlobal,
     paginationBulletRender: function (swiper, index, className) {
         return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
+    },
+    noSwipingClass: 'complex-slider__container',
+    breakpoints: {
+        // when window width is <= 320px
+        767: {
+            noSwiping: false
+        }
     }
 });
+
+/* auto height for complex slider */
++(function() {
+    var sliderContainer = document.querySelector('.complex-slider__container');
+    var complexPaginBlock = document.querySelector('.complex-slider__pagination');
+    complexPaginBlock.addEventListener('click', function(){
+        //Unset height
+        $('.complex-slider__container').css({height:''});
+        //Calc Height
+        $('.complex-slider__container').css({height: $('.complex-slider__container').find('.swiper-slide-active').height() + 95});
+    });
+})();
+
+
+
+
 
 var serviceSwiper = new Swiper('.service-slider__container', {
     pagination: '.service-slider__pagination',
