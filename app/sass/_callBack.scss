@@ -46,6 +46,16 @@
   animation: pulse 1.2s ease infinite;
 }
 
+/*===== COMPLEX-PAGE =====*/
+.call-back__complex-last {
+  margin-top: -30px;
+}
+
+.call-back.call-back__complex {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 @media (max-width: 992px) {
   .call-back {
     padding: 30px;
