@@ -1,0 +1,156 @@
+.about-content {
+  color: $bg_dark;
+
+  &__title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 80%
+  }
+
+  &__fact {
+    &_doc {
+      margin-top: 100px;
+    }
+  }
+
+  &__fact {
+    &_percent {
+      margin-top: 50px;
+    }
+  }
+}
+
+.fact-doc {
+
+  &__title {
+    position: relative;
+    padding-left: 45px;
+    font-size: 18px;
+    line-height: 18px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -8px;
+      height: 35px;
+      width: 31px;
+      background: url('../img/about-us/file_icon.png') no-repeat center;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    padding-left: 45px;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    @include fontSH(16px, 24px);
+  }
+
+  &__link {
+    color: $green_sub-title;
+    text-decoration: underline;
+  }
+}
+
+.fact-percent {
+  @include fontSH(14px, 18px);
+
+  &__title {
+    margin-bottom: 0;
+    color: $green_sub-title;
+    font-weight: 600;
+  }
+
+  &__number {
+    margin-bottom: 0;
+    @include fontSH(60px, 60px);
+    color: $green_sub-title;
+    font-weight: lighter;
+  }
+
+  &__desc {
+
+  }
+}
+
+
+@media(max-width: 991px) {
+ .about-content {
+   &__title {
+     margin-top: 30px;
+     margin-bottom: 30px;
+     width: 100%;
+     font-size: 34px;
+   }
+
+   &__fact {
+     &_doc {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       margin-top: 10px;
+     }
+   }
+
+   &__fact {
+     &_percent {
+       margin-top: 30px;
+     }
+   }
+ }
+
+  .fact-doc {
+    &__title {
+      padding: 0 45px;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+
+    &__item {
+      margin-right: 50px;
+    }
+  }
+
+  .fact-percent {
+    display: flex;
+    justify-content: center;
+
+    &__number-block {
+      margin-right: 15px;
+    }
+
+    &__desc {
+      padding-top: 20px;
+      width: 187px;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .about-content {
+    &__title {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      @include fontSH(26px, 32px);
+    }
+  }
+
+  .fact-percent {
+    flex-direction: column;
+    margin-left: calc((100% - 187px) / 2);
+
+    &__desc {
+      padding-top: 0;
+    }
+ }
+}

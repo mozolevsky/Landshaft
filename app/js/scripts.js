@@ -321,9 +321,11 @@ var complexSwiper = new Swiper('.complex-slider__container', {
     makeHeight();
 
     var complexPaginBlock = document.querySelector('.complex-slider__pagination');
-    complexPaginBlock.addEventListener('click', function(e) {
-        makeHeight();
-    });
+    if (complexPaginBlock) {
+        complexPaginBlock.addEventListener('click', function(e) {
+            makeHeight();
+        });
+     }
 })();
 
 /* auto height for complex slider */

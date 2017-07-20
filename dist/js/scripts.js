@@ -314,16 +314,17 @@ var complexSwiper = new Swiper('.complex-slider__container', {
                 }
 
                 plantsBlock.style.cssText = 'height:' + plantsBlockHeight + 'px; overflow-y: auto;';
-                console.log('1');
             }
         }
     }
     makeHeight();
 
     var complexPaginBlock = document.querySelector('.complex-slider__pagination');
-    complexPaginBlock.addEventListener('click', function(e) {
-        makeHeight();
-    });
+    if (complexPaginBlock) {
+        complexPaginBlock.addEventListener('click', function(e) {
+            makeHeight();
+        });
+    }
 })();
 
 /* auto height for complex slider */

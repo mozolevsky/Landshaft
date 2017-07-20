@@ -1,34 +1,12 @@
 @import 'helpers';
-@import 'header';
-@import 'aboutUs';
-@import 'slider';
-@import 'service';
-@import 'callBack';
-@import 'projects';
-@import 'experience';
-@import 'articles';
-@import 'clients';
-@import 'public';
-@import 'footer';
-@import 'seo';
-@import 'breadcrumbs';
-@import 'service-page';
-@import 'fade';
-@import 'popup';
-@import 'works-list';
-@import 'recomend';
-@import 'advantages';
-@import 'projects-row';
-@import 'animations';
-@import 'services-about-us';
-@import 'work-page';
-@import 'complex-page';
+@import 'about-service';
 
 
 @font-face {
   font-family: Neris;
   src: url('../fonts/Neris-SemiBold.otf');
 }
+
 
 body {
   position: relative;
@@ -102,3 +80,31 @@ button {
     text-align: center;
   }
 }
+
+
+@import 'header';
+@import 'aboutUs';
+@import 'slider';
+@import 'service';
+@import 'callBack';
+@import 'projects';
+@import 'experience';
+@import 'articles';
+@import 'clients';
+@import 'public';
+@import 'footer';
+@import 'seo';
+@import 'breadcrumbs';
+@import 'service-page';
+@import 'fade';
+@import 'popup';
+@import 'works-list';
+@import 'recomend';
+@import 'advantages';
+@import 'projects-row';
+@import 'animations';
+@import 'services-about-us';
+@import 'work-page';
+@import 'complex-page';
+@import 'about-top';
+@import 'about-content';

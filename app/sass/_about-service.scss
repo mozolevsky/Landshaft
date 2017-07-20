@@ -1,0 +1,82 @@
+.about-service {
+  margin-bottom: 40px;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    padding: 17px 30px;
+    min-height: 167px;
+    width: 24.5%;
+    background: lightblue;
+
+    &_1 {
+      background: url('../img/about-us/about-service-item-1_bg.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+    &_2 {
+      background: url('../img/about-us/about-service-item-2_bg.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+    &_3 {
+      background: url('../img/about-us/about-service-item-3_bg.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+    &_4 {
+      background: url('../img/about-us/about-service-item-4_bg.jpg') no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  &__item-title {
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @include fontSH(16px, 30px);
+    text-align: center;
+  }
+}
+
+
+@media(max-width: 991px) {
+  .about-service {
+    margin-bottom: 33px;
+
+    &__items {
+      margin: 0 auto;
+      width: 80%;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      margin-bottom: 17px;
+      width: 280px;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .about-service {
+    margin-bottom: 20px;
+
+    &__items {
+      width: 100%;
+    }
+
+    &__item {
+      margin-bottom: 1px;
+      margin-right: 1px;
+      flex-grow: 1;
+    }
+
+
+  }
+}

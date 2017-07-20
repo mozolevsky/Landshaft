@@ -14,12 +14,11 @@
 
 .breadcrumbs__item {
   display: inline-block;
-}
 
-.breadcrumbs__link {
-  padding-right: 26px;
-  position: relative;
-  color: $green_medium;
+  &_light {
+    opacity: 0.5;
+    color: $white;
+  }
 }
 
 .breadcrumbs__link::after {
@@ -29,6 +28,25 @@
   height: 10px;
   background: url('../img/breadcrumbs-arrow.png') no-repeat center;
 }
+
+.breadcrumbs__link {
+  padding-right: 26px;
+  position: relative;
+  color: $green_medium;
+
+  &_light {
+    opacity: 0.5;
+    color: $white;
+
+    &::after {
+      background: url('../img/about-us/breadcrumb-arrow2.svg') no-repeat center;
+      opacity: 1;
+    }
+  }
+
+}
+
+
 
 @media (max-width: 768px) {
   .breadcrumbs {

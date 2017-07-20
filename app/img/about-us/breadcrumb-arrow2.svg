@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4.562" height="7.594" viewBox="0 0 4.562 7.594">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+  <path id="breadcrumb-arrow2" class="cls-1" d="M145.658,170.287l-4.576,3.8v-7.593Z" transform="translate(-141.094 -166.5)"/>
+</svg>
