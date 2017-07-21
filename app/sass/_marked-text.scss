@@ -1,0 +1,39 @@
+.marked-text {
+  margin: 24px 0;
+  padding: 30px 80px;
+
+
+  border-top: 1px solid #c8e1bd;
+  border-bottom: 1px solid #c8e1bd;
+  text-align: center;
+
+  &__title {
+    margin-top: 0;
+    @include fontSH(20px, 30px);
+    text-transform: uppercase;
+
+    &_green {
+      color: #6cb443;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 0;
+    color: #6cb443;
+  }
+}
+
+
+@media(max-width: 991px) {
+  .marked-text {
+    margin: 30px 0;
+    padding: 27px 40px;
+  }
+}
+
+@media(max-width: 768px) {
+  .marked-text {
+    margin: 22px 0;
+    padding: 27px 0;
+  }
+}

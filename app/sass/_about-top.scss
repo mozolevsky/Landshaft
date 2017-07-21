@@ -11,10 +11,20 @@
   font-family: Neris;
   letter-spacing: 0.005em;
 
+  &_green {
+    margin-bottom: 20px;
+    background: url('../img/about-us/about-top-green_bg.png') no-repeat center;
+  }
+
   &__title {
+    width: 72%;
     margin-bottom: 73px;
     @include fontSH(62px, 70px);
     color: $white;
+
+    &_narrow {
+      width: 53%;
+    }
   }
 
   &__desc {

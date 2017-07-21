@@ -2,7 +2,7 @@
   color: $bg_dark;
 
   &__title {
-    margin-top: 50px;
+    margin-top: 44px;
     margin-bottom: 20px;
     width: 80%
   }
@@ -11,13 +11,32 @@
     &_doc {
       margin-top: 100px;
     }
-  }
 
-  &__fact {
     &_percent {
       margin-top: 50px;
     }
+
+    &_winner1 {
+      margin-top: 145px;
+    }
+
+    &_label {
+      margin-top: 130%;
+    }
+
+    &_list {
+      margin-top: 531px;
+    }
   }
+
+  &__map-box {
+    width: 100%;
+  }
+
+  &__map {
+    width: 100%;
+  }
+
 }
 
 .fact-doc {
@@ -77,6 +96,48 @@
   }
 }
 
+.fact-label {
+  @include fontSH(14px, 20px);
+
+  &__title {
+    width: 80%;
+  }
+
+  &__explanation {
+    width: 80%;
+
+    &::before {
+      content: '*';
+      color: #469c2c;
+    }
+  }
+}
+
+.fact-list {
+  &__title {
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+
+  &__list {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 15px;
+    @include fontSH(14px, 24px);
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '●';
+      color: #57a638;
+    }
+  }
+}
 
 @media(max-width: 991px) {
  .about-content {
@@ -88,20 +149,23 @@
    }
 
    &__fact {
-     &_doc {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-       margin-top: 10px;
-     }
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-top: 10px;
    }
 
    &__fact {
      &_percent {
        margin-top: 30px;
      }
+
+     &_winner1 {
+       margin-bottom: 10px;
+     }
    }
+
  }
 
   .fact-doc {
@@ -134,9 +198,23 @@
       width: 187px;
     }
   }
+
+  .fact-label {
+    display: flex;
+    align-items: center;
+
+    &__img {
+      margin-right: 20px;
+    }
+  }
+
+  .fact-list {
+    display: none;
+  }
+
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
   .about-content {
     &__title {
       margin-top: 25px;
@@ -147,10 +225,24 @@
 
   .fact-percent {
     flex-direction: column;
-    margin-left: calc((100% - 187px) / 2);
+    //margin-left: calc((100% - 187px) / 2);
 
     &__desc {
       padding-top: 0;
     }
  }
+
+  .fact-label {
+    display: block;
+    text-align: center;
+
+    &__img {
+      margin-right: 0;
+    }
+
+    &__explanation {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
 }

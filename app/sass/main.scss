@@ -1,5 +1,4 @@
 @import 'helpers';
-@import 'about-service';
 
 
 @font-face {
@@ -43,6 +42,14 @@ body {
 
 .visible {
   display: block !important;
+}
+
+.zero-top {
+  margin-top: 0;
+}
+
+.zero-bottom {
+  margin-bottom: 0;
 }
 
 button {
@@ -108,3 +115,7 @@ button {
 @import 'complex-page';
 @import 'about-top';
 @import 'about-content';
+@import 'about-service';
+@import 'marked-text';
+@import 'partners';
+@import 'social';

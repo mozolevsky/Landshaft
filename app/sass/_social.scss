@@ -1,0 +1,68 @@
+.social {
+  padding: 35px 0;
+  color: #39393b;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__txt {
+    margin-bottom: 0;
+    margin-right: 23px;
+    @include fontSH(22px, 30px);
+    font-weight: 600;
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__link {
+    margin-right: 15px;
+    display: block;
+    width: 61px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &_fc {
+      background-image: url('../img/about-us/fc_icon.png');
+    }
+
+    &_google {
+      background-image: url('../img/about-us/google_icon.png');
+    }
+
+    &_hz {
+      background-image: url('../img/about-us/hz_icon.png');
+    }
+  }
+}
+
+@media(max-width: 991px) {
+
+}
+
+@media(max-width: 768px) {
+  .social {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__txt {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+
+    &__link {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
