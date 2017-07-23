@@ -8,6 +8,7 @@
   }
 
   &__fact {
+
     &_doc {
       margin-top: 100px;
     }
@@ -27,6 +28,22 @@
     &_list {
       margin-top: 531px;
     }
+
+    &_boss {
+      margin-top: 40px;
+    }
+
+    &_list2 {
+      margin-top: 160px;
+    }
+
+    &_list3 {
+      margin-bottom: -40px;
+    }
+
+    &_garden-path {
+      margin-top: 400px;
+    }
   }
 
   &__map-box {
@@ -35,6 +52,16 @@
 
   &__map {
     width: 100%;
+  }
+
+  &__float-left-img {
+    margin-right: 30px;
+    float: left;
+  }
+
+  &__float-right-img {
+    margin-left: 30px;
+    float: right;
   }
 
 }
@@ -115,7 +142,9 @@
 
 .fact-list {
   &__title {
-    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 10px;
     font-weight: 600;
   }
 
@@ -137,6 +166,92 @@
       color: #57a638;
     }
   }
+
+  &__txt {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__link {
+    color: #6cb443;
+    text-decoration: underline;
+  }
+}
+
+.fact-boss {
+  display: flex;
+
+  &_mobile {
+    display: none;
+    margin-top: 20px;
+  }
+
+  &__img {
+    width: 80px;
+    height: 80px;
+    margin-right: 16px;
+  }
+
+  &__title {
+    @include fontSH(18px, 24px);
+  }
+
+  &__desc {
+    @include fontSH(14px, 20px);
+    font-style: italic;
+  }
+}
+
+.number-list {
+  padding-left: 0;
+  list-style-type: none;
+
+  &__item {
+    margin-bottom: 14px;
+    @include fontSH(18px, 32px);
+  }
+
+  &__color-number {
+    margin-right: 10px;
+    color: #57a638;
+  }
+}
+
+.marker-list {
+  padding-left: 0;
+  list-style-type: none;
+
+  &__item {
+    position: relative;
+    padding-left: 27px;
+    margin-bottom: 14px;
+    @include fontSH(18px, 32px);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 15px;
+      width: 12px;
+      height: 1px;
+      background-color: #57a638;
+    }
+  }
+
+}
+
+.fact-garden-path {
+  &__img {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    @include fontSH(18px, 30px);
+    color: #57a638;
+    text-decoration: underline;
+  }
 }
 
 @media(max-width: 991px) {
@@ -154,15 +269,30 @@
      justify-content: center;
      align-items: center;
      margin-top: 10px;
-   }
 
-   &__fact {
      &_percent {
        margin-top: 30px;
      }
 
      &_winner1 {
        margin-bottom: 10px;
+     }
+
+     &_list {
+       display: none;
+     }
+
+     &_list2 {
+       align-items: flex-start;
+     }
+
+     &_list3 {
+       align-items: flex-start;
+       margin-bottom: 0;
+     }
+
+     &_garden-path {
+       align-items: flex-start;
      }
    }
 
@@ -209,7 +339,34 @@
   }
 
   .fact-list {
+
+  }
+
+  .fact-boss {
     display: none;
+
+    &_mobile {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .number-list {
+    &__item {
+      margin-bottom: 10px;
+      @include fontSH(16px, 26px);
+    }
+  }
+
+  .marker-list {
+    &__item {
+      margin-bottom: 10px;
+      @include fontSH(16px, 26px);
+
+      &::before {
+        top: 12px;
+      }
+    }
   }
 
 }
@@ -244,5 +401,9 @@
       margin: 0 auto;
       text-align: center;
     }
+  }
+
+  .number-list {
+    @include fontSH(16px, 42px);
   }
 }

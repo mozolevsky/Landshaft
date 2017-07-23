@@ -16,6 +16,10 @@
     background: url('../img/about-us/about-top-green_bg.png') no-repeat center;
   }
 
+  &_green2 {
+    background: url('../img/ideas-content/ideas-cont-top-bg.jpg') no-repeat center;
+  }
+
   &__title {
     width: 72%;
     margin-bottom: 73px;
@@ -29,6 +33,12 @@
 
   &__desc {
     font-size: 18px;
+
+    &_date {
+      padding-left: 30px;
+      background: url('../img/ideas-content/date_icon.png') no-repeat;
+      background-position: calc(50% - 45px) 7px;
+    }
   }
 
   &__breadcrumbs-box {

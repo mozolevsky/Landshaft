@@ -314,6 +314,7 @@ var complexSwiper = new Swiper('.complex-slider__container', {
                 }
 
                 plantsBlock.style.cssText = 'height:' + plantsBlockHeight + 'px; overflow-y: auto;';
+                console.log('1');
             }
         }
     }
@@ -324,7 +325,7 @@ var complexSwiper = new Swiper('.complex-slider__container', {
         complexPaginBlock.addEventListener('click', function(e) {
             makeHeight();
         });
-    }
+     }
 })();
 
 /* auto height for complex slider */
@@ -332,14 +333,16 @@ var complexSwiper = new Swiper('.complex-slider__container', {
     var sliderContainer = document.querySelector('.complex-slider__container');
     var complexPaginBlock = document.querySelector('.complex-slider__pagination');
 
-    $('.complex-slider__container').css({height: $('.complex-slider__container').find('.swiper-slide-active').height() + 80});
+   if (sliderContainer && complexPaginBlock) {
+       $('.complex-slider__container').css({height: $('.complex-slider__container').find('.swiper-slide-active').height() + 80});
 
-    complexPaginBlock.addEventListener('click', function(){
-        //Unset height
-        $('.complex-slider__container').css({height:''});
-        //Calc Height
-        $('.complex-slider__container').css({height: $('.complex-slider__container').find('.swiper-slide-active').height() + 80});
-    });
+       complexPaginBlock.addEventListener('click', function(){
+           //Unset height
+           $('.complex-slider__container').css({height:''});
+           //Calc Height
+           $('.complex-slider__container').css({height: $('.complex-slider__container').find('.swiper-slide-active').height() + 80});
+       });
+   }
 })();
 
 var servicesAdvOrderSwiper = new Swiper('.advantages-order_slider', {
@@ -359,7 +362,7 @@ var servicesAdvOrderSwiper = new Swiper('.advantages-order_slider', {
         768: {
             slidesPerView: 1,
         },
-        // when window width is <= 768px
+       // when window width is <= 768px
         1200: {
             slidesPerView: 3,
         },

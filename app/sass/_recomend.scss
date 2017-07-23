@@ -27,6 +27,12 @@
   width: 100%;
 }
 
+.recomend__aside {
+  &_full {
+    margin-top: 50px;
+  }
+}
+
 @media (max-width: 992px) {
   .block__title.recomend__title {
     margin-bottom: 25px;
