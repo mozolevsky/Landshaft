@@ -352,23 +352,23 @@ var servicesAdvOrderSwiper = new Swiper('.advantages-order_slider', {
     breakpoints: {
         // when window width is <= 320px
         320: {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
         // when window width is <= 480px
         480: {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
         // when window width is <= 768px
         768: {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
        // when window width is <= 768px
         1200: {
-            slidesPerView: 3,
+            slidesPerView: 3
         },
         // when window width is <= 768px
         1920: {
-            slidesPerView: 3,
+            slidesPerView: 3
         }
     }
 });
