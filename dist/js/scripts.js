@@ -17,7 +17,6 @@ var projectsSwiper = new Swiper('.projectsSlider', {
     keyboardControl: true
 });
 
-
 var clientsSwiper = new Swiper('.clients-slider', {
     pagination: '.clients__pagination',
     paginationClickable: true,
@@ -87,7 +86,6 @@ var servicesAdvSwiper = new Swiper('.advantages_slider', {
 
 var bulletNamesGlobal = bulletNamesGlobal ? bulletNamesGlobal : ['Нет названий табов'];
 var bulletNamesGlobal2 = bulletNamesGlobal2 ? bulletNamesGlobal2 : ['Нет названий табов'];
-
 
 var serviceSwiper = new Swiper('.service-slider__container', {
     pagination: '.service-slider__pagination',
@@ -352,23 +350,52 @@ var servicesAdvOrderSwiper = new Swiper('.advantages-order_slider', {
     breakpoints: {
         // when window width is <= 320px
         320: {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
         // when window width is <= 480px
         480: {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
         // when window width is <= 768px
         768: {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
        // when window width is <= 768px
         1200: {
-            slidesPerView: 3,
+            slidesPerView: 3
         },
         // when window width is <= 768px
         1920: {
-            slidesPerView: 3,
+            slidesPerView: 3
         }
+    }
+});
+
+// contacts typing text
+var firstStart = 1;
+
+var message = document.getElementById("message");
+
+function printed_el_text( el ){
+    var text = el.innerHTML,
+        i = 0,
+        __print = function (){
+            i++;
+            if( i <= text.length ){
+                el.innerHTML = text.substr(0, i);
+                setTimeout( __print, 50 );
+            }
+        };
+    __print();
+};
+
+$(document).scroll(function () {
+    s_top = $("body").scrollTop();
+    yes = $("#start-typing").offset().top;
+
+    if(s_top > yes && firstStart) {
+        printed_el_text(message);
+        console.log('yes');
+        firstStart = 0;
     }
 });

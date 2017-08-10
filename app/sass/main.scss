@@ -56,6 +56,24 @@ button {
   outline: none;
 }
 
+label.error {
+  position: absolute;
+  font-size: 12px;
+  font-weight: normal;
+  color: red;
+  top: -23px;
+  left: 0;
+}
+
+input.error {
+  border: 1px solid red;
+}
+
+.valid {
+/*  border: 1px solid green!important;
+  background: lightgreen;*/
+}
+
 .free-cost {
   display: inline-block;
   @include roboto(bold, 11px, $white, 22px);
