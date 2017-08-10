@@ -338,7 +338,6 @@
         $(".fade-block").fadeOut(600);
     });
 </script>
-
 <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/keyCodeHandler.js"></script>
 <script src="js/js_inputmask.js"></script>
@@ -349,8 +348,38 @@
     });
 </script>
 <script src="js/scripts.js"></script>
+<script>
+    // contacts typing text
+    var firstStart = 1;
 
-<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+    var message = document.getElementById("message");
+
+    function printed_el_text( el ){
+        var text = el.innerHTML,
+            i = 0,
+            __print = function (){
+                i++;
+                if( i <= text.length ){
+                    el.innerHTML = text.substr(0, i);
+                    setTimeout( __print, 50 );
+                }
+            };
+        __print();
+    };
+
+    $(document).scroll(function () {
+        s_top = $("body").scrollTop();
+        yes = $("#start-typing").offset().top;
+
+        if(s_top > yes && firstStart) {
+            printed_el_text(message);
+            console.log('yes');
+            firstStart = 0;
+        }
+    });
+</script>
+
+<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
 <script type="text/javascript">
     var centerCoordMap = [55.675455, 37.877619];
     function init () {

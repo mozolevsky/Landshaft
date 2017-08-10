@@ -371,31 +371,3 @@ var servicesAdvOrderSwiper = new Swiper('.advantages-order_slider', {
     }
 });
 
-// contacts typing text
-var firstStart = 1;
-
-var message = document.getElementById("message");
-
-function printed_el_text( el ){
-    var text = el.innerHTML,
-        i = 0,
-        __print = function (){
-            i++;
-            if( i <= text.length ){
-                el.innerHTML = text.substr(0, i);
-                setTimeout( __print, 50 );
-            }
-        };
-    __print();
-};
-
-$(document).scroll(function () {
-    s_top = $("body").scrollTop();
-    yes = $("#start-typing").offset().top;
-
-    if(s_top > yes && firstStart) {
-        printed_el_text(message);
-        console.log('yes');
-        firstStart = 0;
-    }
-});

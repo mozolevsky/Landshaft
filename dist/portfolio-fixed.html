@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio-fixed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+</head>
+
+<body>
+<div class="body-wrap">
+
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href="index.html">
+                    <picture>
+                        <source srcset="https://pro-landshaft.com/img/logo_mobile_small.png" media="(max-width: 380px)" class="mobilelogo">
+                        <source srcset="https://pro-landshaft.com/img/logo_mobile.png" media="(max-width: 760px)" class="mobilelogo">
+                        <img src="https://pro-landshaft.com/img/logo.png" class="biglogo">
+                    </picture>
+                </a>
+            </div>
+            <div class="header__nav">
+                <p class="header__nav-time">Ежедневно с 9.00 до 19.00. Москва и МО</p>
+                <ul class="header__nav-block">
+                    <li class="header__nav-item"><a href="https://pro-landshaft.com/portfolio">Портфолио</a></li>
+                    <li class="header__nav-item"><a href="https://pro-landshaft.com/about.html">О нас</a></li>
+                    <li class="header__nav-item"><a href="https://pro-landshaft.com/contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="header__contacts">
+                <button class="header__phones-icon"></button>
+                <div class="header__contacts-main-block">
+                    <button class="popup__close header__phones-close"></button>
+                    <div class="header__phones">
+                        <p class="header__popup-title popup__title">Наши телефоны</p>
+                        <span class="comagic_phone">+7 (495) 797-09-08</span>
+                        <p class="comagic_phone">+7 (903) 797-09-08</p>
+                    </div>
+                    <button class="header__btn popup__order-tel header__btn_call">Заказать звонок</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-us">
+        <div class="container">
+            <button class="about-us__nav-open">
+                <span><i class="about-us__nav-open-icon"></i>Меню</span>
+            </button>
+            <ul class="about-us__nav"> <!-- about-us__nav_active-->
+                <li class="about-us__nav-item">
+                    <div class="about-us__nav-link"><a href="https://pro-landshaft.com/proektirovanie">Проектирование</a></div>
+                    <ul class="about-us__inner-menu">
+                        <li><a href="https://pro-landshaft.com/proektirovanie/landshaftnoe.html">Эскизный проект</a></li>
+                        <li><a href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi">Идеи для дачи</a></li>
+                    </ul>
+                </li>
+                <li class="about-us__nav-item">
+                    <div class="about-us__nav-link"><a href="https://pro-landshaft.com/blagoustrojstvo">Благоустройство <span>участка</span><a/></div>
+                    <ul class="about-us__inner-menu">
+                        <li><a href="https://pro-landshaft.com/blagoustrojstvo/sadovyie-dorozhki.html">Садовые дорожки</a></li>
+                        <li><a href="https://pro-landshaft.com/blagoustrojstvo/avtopoliv.html">Автополив</a></li>
+                        <li><a href="https://pro-landshaft.com/blagoustrojstvo/drenazhnyij-sistemyi.html">Дренажный системы</a></li>
+                        <li><a href="https://pro-landshaft.com/blagoustrojstvo/podpornaya-stenka.html">Подпорная стенка</a></li>
+                        <li><a href="https://pro-landshaft.com/blagoustrojstvo/ulichnoe-osveshhenie.html">Уличное освещение</a></li>
+                        <li><a href="https://pro-landshaft.com/blagoustrojstvo/dekorativnyij-prud-i-vodoyom.html">Декоративный пруд и водоём</a></li>
+                        <li><a href="https://pro-landshaft.com/blagoustrojstvo/kaskad-vodopad-ruchi-i-fontanyi.html">Каскад, водопад, ручьи и фонтаны</a></li>
+                    </ul>
+                </li>
+                <li class="about-us__nav-item">
+                    <div class="about-us__nav-link"><a href="https://pro-landshaft.com/ozelenenie">Озеленение <span>участка</span></a></div>
+                    <ul class="about-us__inner-menu">
+                        <li><a href="https://pro-landshaft.com/ozelenenie/kompleksnoe-ozelenenie.html">Готовый набор растений</a></li>
+                        <li><a href="https://pro-landshaft.com/ozelenenie/gazon-i-gazonnaya-trava.html">Рулонный и посевной газон</a></li>
+                        <li><a href="https://pro-landshaft.com/ozelenenie/plodovyie-derevya-i-kustarniki.html">Плодовые деревья и кусты</a></li>
+                        <li><a href="https://pro-landshaft.com/ozelenenie/oformlenie-czvetami-i-czvetniki.html">Цветники и клумбы</a></li>
+                        <li><a href="https://pro-landshaft.com/ozelenenie/zhivaya-izgorod.html">Живая изгородь</a></li>
+                        <li><a href="https://pro-landshaft.com/ozelenenie/krupnomeryi-posadka-derevev.html">Взрослые деревья от 3 метров</a></li>
+                        <li><a href="https://pro-landshaft.com/ozelenenie/dekorativnyij-ogorod.html">Декоративный огород</a></li>
+                    </ul>
+                </li>
+                <li class="about-us__nav-item about-us__nav-item-right ">
+                    <div class="about-us__nav-link"><a href="https://pro-landshaft.com/uxod-za-sadom">Услуги садовника</a></div>
+                    <ul class="about-us__inner-menu">
+                        <li><a href="https://pro-landshaft.com/uxod-za-sadom/obrezka-derevev-i-kustarnikov.html">Обрезка деревьев и кустов</a></li>
+                        <li><a href="https://pro-landshaft.com/uxod-za-sadom/udalenie-derevev-i-pnej.html">Удаление деревьев и пней</a></li>
+                        <li><a href="https://pro-landshaft.com/uxod-za-sadom/zashhita-derevev-ot-koroedov.html">Защита от короедов</a></li>
+                        <li><a href="https://pro-landshaft.com/uxod-za-sadom/borba-s-boleznyami-derevev.html">Борьба с болезнями </a></li>
+                        <li><a href="https://pro-landshaft.com/uxod-za-sadom/sadovnik-na-sezon.html">Садовник на сезон</a></li>
+                    </ul>
+                </li>
+                <li class="about-us__nav-item about-us__nav-item_mobile">
+                    <div class="about-us__nav-link">Портфолио</div>
+                </li>
+                <li class="about-us__nav-item about-us__nav-item_mobile">
+                    <div class="about-us__nav-link">О нас</div>
+                </li>
+                <li class="about-us__nav-item about-us__nav-item_mobile">
+                    <div class="about-us__nav-link" href="https://pro-landshaft.com/contacts.html">Контакты</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <ul class="breadcrumbs__list"><li class="breadcrumbs__item" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a class="breadcrumbs__link" itemprop="url" rel="Главная" href="https://pro-landshaft.com/"><span itemprop="title">Главная</span></a></li>
+                        <li itemscope="itemscope" class="breadcrumbs__item" itemtype="http://data-vocabulary.org/Breadcrumb"><a class="breadcrumbs__link" itemprop="url" rel="Преимущества работы с профессионалами - это уникальные знания в области ландшафтной архитектуры, садово-паркового искусства и законов природы, экономия времени" href="proektirovanie/"><span itemprop="title">Ландшафтное проектирование</span></a></li>
+                        <li class="breadcrumbs__item" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><li itemscope="itemscope" class="breadcrumbs__item" itemtype="http://data-vocabulary.org/Breadcrumb">Идеи для дачи</li></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="block__title">Идеи для дачи</h1>
+    </div>
+
+    <div class="container">
+        <div class="projects-row">
+            <div class="projects-row__item projects-row__item_two">
+                <a class="projects-row__item-img projects-row__item-img_low" href="#">
+                    <img src="img/work1from2.png">
+                </a>
+                <div class="projects-row__item-desc">
+                    <a class="projects-row__item-title">Услуги профессионального садовника
+                        в Москве</a>
+                    <p class="projects-row__desc-item">
+                        <span>Приходящий садовник для регулярного или периодического ухода за растениями на участке.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="projects-row__item projects-row__item_two">
+                <a class="projects-row__item-img projects-row__item-img_low" href="#">
+                    <img src="img/work2from2.png">
+                </a>
+                <div class="projects-row__item-desc">
+                    <a class="projects-row__item-title">Посадка туй в Москве</a>
+                    <p class="projects-row__desc-item">
+                        <span>Посадка, стрижка, обработка, подкормка, полив, прополка.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="call-back">
+
+            <p class="call-back__desc"> Интересует озеленение участка под ключ? <br> Обсудите все детали с экспертом. </p>
+
+            <button class="header__btn header__btn_call-back popup__order-tel popup__order-tela">Получить совет эксперта</button>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="projects-row">
+            <div class="projects-row__item projects-row__item_three" itemscope itemtype="http://schema.org/Product">
+                <a class="projects-row__item-img" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/vyibor-gazonnoj-travyi-samostoyatelno.html">
+                    <img src="https://pro-landshaft.com/images/gazon1.jpg" alt="Выбор газонной травы самостоятельно" itemprop="image">
+                </a>
+                <div class="projects-row__item-desc" itemprop="description">
+                    <a class="projects-row__item-title" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/vyibor-gazonnoj-travyi-samostoyatelno.html" itemprop="name">Выбор газонной травы самостоятельно</a>
+                    <p class="projects-row__desc-item" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span>Какой газон выбрать для участка? Выбор газонной травы самостоятельно.</span>
+                        <span class="projects__number"></span>
+                        <meta itemprop="price" content="">
+                        <meta itemprop="priceCurrency" content="RUB">
+                    </p>
+                </div>
+            </div>
+            <div class="projects-row__item projects-row__item_three" itemscope itemtype="http://schema.org/Product">
+
+                <a class="projects-row__item-img" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/uslugi-sadovnika-v-moskve.html">
+
+
+
+                    <img src="https://pro-landshaft.com/images/gardener9.jpg" alt="Услуги садовника в Москве" itemprop="image">
+
+
+
+                </a>
+
+                <div class="projects-row__item-desc" itemprop="description">
+
+                    <a class="projects-row__item-title" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/uslugi-sadovnika-v-moskve.html" itemprop="name">Услуги садовника в Москве.</a>
+
+
+
+                    <p class="projects-row__desc-item" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+                        <span>Как выбрать садовника и не погубить свой сад? </span>
+
+                        <span class="projects__number"></span>
+
+                        <meta itemprop="price" content="">
+
+                        <meta itemprop="priceCurrency" content="">
+
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="projects-row__item projects-row__item_three" itemscope itemtype="http://schema.org/Product">
+
+                <a class="projects-row__item-img" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/uxod-za-uchastkom.html">
+
+
+
+                    <img src="https://pro-landshaft.com/images/sad57.png" alt="Услуги садовника сэкономили +57 000 руб, участок 20 соток" itemprop="image">
+
+
+
+                </a>
+
+                <div class="projects-row__item-desc" itemprop="description">
+
+                    <a class="projects-row__item-title" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/uxod-za-uchastkom.html" itemprop="name"> Ищу садовника</a>
+
+
+
+
+
+                    <p class="projects-row__desc-item" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+                        <span>Услуги садовника сэкономили +57 000 руб, участок 20 соток</span>
+
+                        <span class="projects__number"></span>
+
+                        <meta itemprop="price" content="">
+
+                        <meta itemprop="priceCurrency" content="">
+
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="projects-row">
+            <div class="projects-row__item projects-row__item_three" itemscope itemtype="http://schema.org/Product">
+                <a class="projects-row__item-img" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/belaya-shelkovicza/">
+                    <img src="https://pro-landshaft.com/images/shelk1.png" alt="Шелковица в Подмосковье" itemprop="image">
+                </a>
+                <div class="projects-row__item-desc" itemprop="description">
+                    <a class="projects-row__item-title" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/belaya-shelkovicza/" itemprop="name">Шелковица в Подмосковье</a>
+                    <p class="projects-row__desc-item" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span>Белая шелковица, выращивание и уход </span>
+                        <span class="projects__number"></span>
+                        <meta itemprop="price" content="">
+                        <meta itemprop="priceCurrency" content="">
+                    </p>
+                </div>
+            </div>
+            <div class="projects-row__item projects-row__item_three" itemscope itemtype="http://schema.org/Product">
+                <a class="projects-row__item-img" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/dizajn-uchastka-taunxausa.html">
+                    <img src="https://pro-landshaft.com/img/3 (4).png" alt="Статья про профессиональное озеленение участка таунхауса." itemprop="image">
+                </a>
+                <div class="projects-row__item-desc" itemprop="description">
+                    <a class="projects-row__item-title" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/dizajn-uchastka-taunxausa.html" itemprop="name">Дизайн участка таунхауса</a>
+                    <p class="projects-row__desc-item" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span>Сколько будет стоить озеленение участка таунхауса и как долго длятся работы.</span>
+                        <span class="projects__number"></span>
+                        <meta itemprop="price" content="">
+                        <meta itemprop="priceCurrency" content="">
+                    </p>
+                </div>
+            </div>
+            <div class="projects-row__item projects-row__item_three" itemscope itemtype="http://schema.org/Product">
+                <a class="projects-row__item-img" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/dizajn-uchastka-taunxausa.html">
+                    <img src="https://pro-landshaft.com/img/gazonp.png" alt="Какой рулонный газон лучше? Виды газонных трав" itemprop="image">
+                </a>
+                <div class="projects-row__item-desc" itemprop="description">
+                    <a class="projects-row__item-title" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/dizajn-uchastka-taunxausa.html" itemprop="name">Какой рулонный газон лучше? Виды газонных трав</a>
+                    <p class="projects-row__desc-item" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span>Не может самостоятельно выбрать рулонный газон, т.к. не знает, чем он отличается (состав, цвет, свойства)?</span>
+                        <span class="projects__number"></span>
+                        <meta itemprop="price" content="">
+                        <meta itemprop="priceCurrency" content="">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="projects-row">
+            <div class="projects-row__item projects-row__item_three" itemscope itemtype="http://schema.org/Product">
+
+                <a class="projects-row__item-img" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/landshaftnyij-dachnyij-dizajn.html">
+
+
+
+                    <img src="https://pro-landshaft.com/img/zony.png" alt="Ландшафтный дачный дизайн" itemprop="image">
+
+
+
+                </a>
+
+                <div class="projects-row__item-desc" itemprop="description">
+
+                    <a class="projects-row__item-title" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/landshaftnyij-dachnyij-dizajn.html" itemprop="name">Ландшафтный дачный дизайн</a>
+
+
+
+                    <p class="projects-row__desc-item" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+                        <span>Своими руками разбиваем участок на зоны</span>
+
+                        <span class="projects__number"></span>
+
+                        <meta itemprop="price" content="">
+
+                        <meta itemprop="priceCurrency" content="">
+
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="projects-row__item projects-row__item_three" itemscope itemtype="http://schema.org/Product">
+
+                <a class="projects-row__item-img" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/rulonnyij-gazon-ot-proizvoditelya.html">
+
+
+
+                    <img src="https://pro-landshaft.com/img/p1100916.png" alt="Рулонный газон от производителя" itemprop="image">
+
+
+
+                </a>
+
+                <div class="projects-row__item-desc" itemprop="description">
+
+                    <a class="projects-row__item-title" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/rulonnyij-gazon-ot-proizvoditelya.html" itemprop="name">Рулонный газон от производителей</a>
+
+
+
+                    <p class="projects-row__desc-item" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+                        <span>Кто выращивает газон в Подмосковье</span>
+
+                        <span class="projects__number"></span>
+
+                        <meta itemprop="price" content="">
+
+                        <meta itemprop="priceCurrency" content="">
+
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="call-back call-back_last">
+            <p class="call-back__desc">Нам можно доверить самое ценное – озеленение вашего участка! Хотите узнать, как будем подбирать растения? Задайте вопросы специалистам! </p>
+            <p class="call-back__phone button__pulse-animate">+7 (495) 797-09-08</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__block-wrap">
+                    <div class="footer__block">
+                        <p class="footer__block-title"><a href="https://pro-landshaft.com/proektirovanie/">Ландшафтное проектирование</a></p>
+                        <a class="footer__link" href="https://pro-landshaft.com/proektirovanie/landshaftnoe.html">Эскизный проект</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/proektirovanie/idei-dlya-dachi/">Идеи для дачи</a>
+                    </div>
+                    <div class="footer__block">
+                        <p class="footer__block-title"><a href="https://pro-landshaft.com/ozelenenie/">Озеленение участка</a></p>
+                        <a class="footer__link" href="https://pro-landshaft.com/ozelenenie/gazon-i-gazonnaya-trava.html">Рулонный и посевной газон</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/ozelenenie/plodovyie-derevya-i-kustarniki.html">Плодовые деревья и кусты</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/ozelenenie/oformlenie-czvetami-i-czvetniki.html">Цветники и клумбы</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/ozelenenie/zhivaya-izgorod.html">Живая изгородь</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/ozelenenie/krupnomeryi-posadka-derevev.html">Взрослые деревья от 3 метров</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/ozelenenie/dekorativnyij-ogorod.html">Декоративный огород</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/ozelenenie/kompleksnoe-ozelenenie.html">Готовый набор для озеленения</a>
+                    </div>
+                </div>
+                <div class="footer__block-wrap">
+                    <div class="footer__block">
+                        <p class="footer__block-title"><a href="https://pro-landshaft.com/uxod-za-sadom/">Услуги садовника</a></p>
+                        <a class="footer__link" href="https://pro-landshaft.com/uxod-za-sadom/obrezka-derevev-i-kustarnikov.html">Обрезка деревьев и кустарников</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/uxod-za-sadom/udalenie-derevev-i-pnej.html">Удаление деревьев и пней</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/uxod-za-sadom/zashhita-derevev-ot-koroedov.html">Защита деревьев от короедов</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/uxod-za-sadom/borba-s-boleznyami-derevev.html">Борьба с болезнями деревьев</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/uxod-za-sadom/sadovnik-na-sezon.html">Садовник на сезон</a>
+                    </div>
+                    <div class="footer__block">
+                        <p class="footer__block-title"><a href="https://pro-landshaft.com/about.html">О студии</a></p>
+                        <a class="footer__link" href="https://pro-landshaft.com/portfolio/">Портфолио</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/contacts.html">Контакты</a>
+                    </div>
+                </div>
+                <div class="footer__block-wrap">
+                    <div class="footer__block">
+                        <p class="footer__block-title"><a href="https://pro-landshaft.com/blagoustrojstvo/">Благоустройство территории</a></p>
+                        <a class="footer__link" href="https://pro-landshaft.com/blagoustrojstvo/sadovyie-dorozhki.html">Садовые дорожки</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/blagoustrojstvo/avtopoliv.html">Автополив</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/blagoustrojstvo/drenazhnyij-sistemyi.html">Дренажный системы</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/blagoustrojstvo/podpornaya-stenka.html">Подпорная стенка</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/blagoustrojstvo/ulichnoe-osveshhenie.html">Уличное освещение</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/blagoustrojstvo/dekorativnyij-prud-i-vodoyom.html">Декоративный пруд и водоём</a>
+                        <a class="footer__link" href="https://pro-landshaft.com/blagoustrojstvo/kaskad-vodopad-ruchi-i-fontanyi.html">Каскад, водопад, ручьи и фонтаны</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-wrap" itemscope itemtype="http://schema.org/Organization">
+                    <div class="footer__name">
+                        <p class="footer__desc footer__title" itemprop="name">Студия ландшафтного дизайна в Москве и области</p>
+                        <p class="footer__copyright footer__text">© 2006-2017 Pro-landshaft.com</p>
+                    </div>
+                    <div class="footer__contacts">
+                        <div class="footer__phones-block" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <p class="footer__address footer__title"><span itemprop="addressLocality">Люберцы</span> <span itemprop="streetAddress">ул. Красноармейская, 20а</span></p>
+                            <p class="footer__phones footer__text">
+                                <span itemprop="telephone"class="comagic_phone" >+7 (495) 797-09-08</span>
+                                <span itemprop="telephone"class="comagic_phone" >+7 (903) 797-09-08</span>
+                            </p>
+                        </div>
+                        <div class="footer__mail-block">
+                            <p class="footer__work-hours footer__title">Работаем ежедневно с 9:00 до 21:00</p>
+                            <a class="footer__mail footer__text" href="mailto:help@pro-landshaft.com" itemprop="email">help@pro-landshaft.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="fade-block">
+        <!-- POPUP CALL ME -->
+
+        <div class="popup popup__call-me">
+
+            <button class="popup__close"></button>
+
+            <p class="popup__title">Перезвоните мне</p>
+
+            <form method="post" id="form_zvonok">
+                <input class="popup__input" id="popup__input" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+                <input type="hidden" name="type" value="Заказ звонка">
+                <button class="header__btn popup__send-tel" onclick="yaCounter34870685.reachGoal ('tel'); return true;" type="submit">Жду звонка</button>
+                <p class="popup__politicst">Я согласен с условиями <a href="https://pro-landshaft.com/soglasie.html">политики конфиденциальности</a>.</p>
+            </form>
+        </div>
+
+        <!-- POPUP THANK YOU -->
+        <div class="popup popup__thank-you">
+            <button class="popup__close"></button>
+            <p class="popup__title">Спасибо за заявку!</p>
+            <p class="popup__text">В ближайшее время наш специалист свяжется с вами.</p>
+        </div>
+
+        <!-- POPUP DON'T WORK-->
+        <div class="popup popup__not-work">
+            <button class="popup__close"></button>
+            <p class="popup__title">Мы сейчас не работаем</p>
+            <p class="popup__text">Если вы оставите свой номер, мы перезвоним на него.</p>
+            <button class="header__btn popup__order-tel popup__call-back">Заказать звонок</button>
+        </div>
+    </div>
+    <script src="2017/libs/swiper/dist/js/swiper.min.js"></script>
+    <script src="2017/libs/jquery/dist/jquery.min.js"></script>
+    <script src="2017/js/keyCodeHandler.js"></script>
+    <script src="2017/js/js_inputmask.js"></script>
+    <script src="2017/js/inputmask.js"></script>
+    <script src="2017/js/scripts.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <script src="2017/js/fotorama.js"></script>
+
+    <script>
+        var serviceSwiper = new Swiper('.service-slider__container', {
+            pagination: '.service-slider__pagination',
+            paginationClickable: true,
+            bulletActiveClass: 'service-slider__pagination-link_active',
+            bulletClass: 'service-slider__pagination-link',
+            slidesPerView: 1,
+            spaceBetween: 0,
+            // Responsive breakpoints
+            breakpoints: {
+                // when window width is <= 768px
+                767: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    pagination: '.service-slider__pagination-bullets',
+                    bulletClass: 'service-slider__pagination-bullet',
+                    bulletActiveClass: 'service-slider__pagination-bullet_active',
+                    paginationBulletRender: function (swiper, index, className) {
+                        return '<div class="' + className + '"></div>';
+                    }
+                },
+                // when window width is <= 991px
+                991: {
+                    slidesPerView: 3,
+                    spaceBetween: 6
+                }},
+            bulletNames: bulletNamesGlobal,
+            paginationBulletRender: function (swiper, index, className) {
+                return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
+            }
+        });
+
+        var serviceSwiper2 = new Swiper('.service-slider2__container', {
+            pagination: '.service-slider2__pagination',
+            paginationClickable: true,
+            bulletActiveClass: 'service-slider__pagination-link_active',
+            bulletClass: 'service-slider__pagination-link',
+            slidesPerView: 1,
+            spaceBetween: 40,
+            bulletNames: bulletNamesGlobal2,
+            paginationBulletRender: function (swiper, index, className) {
+                return '<a href="#"  class="' + className + '">'+ this.bulletNames[index] +'</a>';
+            }
+        });
+
+    </script>
+
+
+
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter34870685 = new Ya.Metrika({
+                        id:34870685,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/34870685" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Analytics.google counter -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-61594042-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- /Analytics.google counter -->
+
+</div>
+</body>
+</html>

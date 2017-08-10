@@ -1,7 +1,7 @@
 .projects-row {
   padding-bottom: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .projects-row__item {
@@ -12,10 +12,20 @@
 
 .projects-row__item_three {
   width: 31%;
+  margin-right: 43px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 .projects-row__item_two {
   width: 48%;
+  margin-right: 4%;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 .projects-row__item-img {
@@ -27,6 +37,10 @@
 .projects-row__item-img img {
   width: 100%;
   @include trans(0.5s);
+}
+
+.projects-row__item-img_low img {
+  height: 300px;
 }
 
 .projects-row__item-img img:hover {
@@ -84,6 +98,7 @@
   .projects-row__item {
     flex-direction: column;
     width: 100%;
+    margin-right: 0;
   }
 
   .projects-row__item-img {
